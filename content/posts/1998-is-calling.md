@@ -62,7 +62,7 @@ I'd like to say I'm bank rolling my $15/mo again, but I haven't finished moving 
 
 * Like what you read today? Want to help me recover some of my AWS costs I lost? I'm coffee driven. [Buy me a coffee](https://ko-fi.com/agilesyndrome)
 * Shout out to the old robotics team, still kicking it! [Children of the Swamp #179](https://www.thebluealliance.com/team/179)
-* Sticking with S3 and CloudFront, that's cool, but you'll want something like [S3Stat](https://www.s3stat.com) to watch your log files.  But you didn't know your S3 logs had this much data in it.
+* Sticking with S3 and CloudFront, that's cool, but you'll want something like [S3Stat](https://www.s3stat.com) to watch your log files.  I bet you didn't know your S3 logs had this much data in it. S3Stat made analytics easy. 
 
 ## Your thoughts?
 
