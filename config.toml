@@ -1,0 +1,4 @@
+baseURL = "https://blog.agilesyndro.me/"
+languageCode = "en-us"
+title = "AgileSyndro.me"
+theme = 'hugo-theme-m10c'
