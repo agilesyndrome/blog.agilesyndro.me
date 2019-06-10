@@ -1,14 +1,13 @@
 clean:
 	rm -rf docs
 
+update:
+	git submodule update --remote --merge
+
 build:
 	hugo
 
+serve:
+	hugo server -D -b http://blawg.agilesyndro.me:1313 -v --disableFastRender
 
-deploy:
-	echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-	git add .
-	git commit -S -m "rebuilding site `date`"
-	git push origin master
-
-PHONY: clean, build, deploy
+PHONY: clean, build, serve, update

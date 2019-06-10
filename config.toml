@@ -1,5 +1,40 @@
 baseURL = "https://blog.agilesyndro.me/"
 languageCode = "en-us"
+defaultContentLanguage = "en"
 title = "AgileSyndro.me"
-theme = 'hugo-theme-m10c'
+theme = 'cupper-hugo-theme'
 publishDir = "docs"
+enableGitInfo = true
+disqusShortname = "agilesyndrome"
+
+[taxonomies]
+	tag="tags"
+
+[permalinks]
+	post = "/:filename/"
+
+[imaging]
+	quality = 99
+
+[params]
+	author = "Drew E. Easley"
+	description = "Empowering the Open Source"
+	footer = "Made with [Hugo](https://gohugo.io/) Themed with [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme)"
+
+[menu]
+  [[menu.nav]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.nav]]
+    name = "Blog"
+    url = "/posts"
+    weight = 2
+  [[menu.nav]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+  [[menu.nav]]
+    name = "RSS"
+    url = "/index.xml"
+    weight = 5
