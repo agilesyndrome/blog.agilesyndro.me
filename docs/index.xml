@@ -11,6 +11,16 @@
     
     
     <item>
+      <title>Terraform Modules Suck, but you should still use them</title>
+      <link>https://blog.agilesyndro.me/posts/terraform-modules-suck/</link>
+      <pubDate>Mon, 10 Jun 2019 19:02:48 -0400</pubDate>
+      
+      <guid>https://blog.agilesyndro.me/posts/terraform-modules-suck/</guid>
+      <description>Terraform Like so many other people I jumped into Terraform right away. This was the answer I was looking for. It could provide an automated way to store AWS configurations in source control. It also let me try out Azure, Google, and many other providers in a cloud-agnostic (sorta) kinda of way.
+Within a few days there were segments of code everywhere to create an EC2 instance. Everybody on my team made their own Terraform code.</description>
+    </item>
+    
+    <item>
       <title>1998 is calling, and it wants a website</title>
       <link>https://blog.agilesyndro.me/posts/1998-is-calling/</link>
       <pubDate>Mon, 10 Jun 2019 10:28:35 -0400</pubDate>
