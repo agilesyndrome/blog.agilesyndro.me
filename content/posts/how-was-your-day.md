@@ -49,4 +49,4 @@ Out of the blue one day she asked me, just what is Ansible and Terraform?  Here'
 
 My wife is truly one of those special unicorns that were only supposed to exist in fairy tales.  She puts up with a lot of my technical disserations about my day.  She's been here through the great and not so great times.  I'm madly in love with you sweetheart! 
 
-How does telling your significant other about your day go?  What are the challenges you face?
+Am I the only one who struggles with telling others about their day? What challenges do you face?
