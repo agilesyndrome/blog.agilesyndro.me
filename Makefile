@@ -1,6 +1,9 @@
 clean:
 	rm -rf docs
 
+post:
+	hugo new posts/$(name).md
+
 update:
 	git submodule update --remote --merge
 
