@@ -20,6 +20,7 @@ disqusShortname = "agilesyndrome"
 	author = "Drew E. Easley"
 	description = "Empowering the Open Source"
 	footer = "Made with [Hugo](https://gohugo.io/) Themed with [Cupper](https://github.com/agilesyndrome/cupper-hugo-theme)"
+        heapSiteId = "1793759258"
 
 [menu]
   [[menu.nav]]
