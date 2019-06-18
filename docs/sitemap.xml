@@ -3,20 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.agilesyndro.me/posts/how-was-your-day/</loc>
+    <lastmod>2019-06-13T13:37:46-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.agilesyndro.me/tags/ansible/</loc>
+    <lastmod>2019-06-13T13:37:46-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.agilesyndro.me/tags/communication/</loc>
+    <lastmod>2019-06-13T13:37:46-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.agilesyndro.me/tags/love/</loc>
+    <lastmod>2019-06-13T13:37:46-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.agilesyndro.me/posts/</loc>
-    <lastmod>2019-06-11T06:57:38-04:00</lastmod>
+    <lastmod>2019-06-13T13:37:46-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.agilesyndro.me/tags/</loc>
-    <lastmod>2019-06-11T06:57:38-04:00</lastmod>
+    <lastmod>2019-06-13T13:37:46-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.agilesyndro.me/tags/terraform/</loc>
-    <lastmod>2019-06-11T06:57:38-04:00</lastmod>
+    <lastmod>2019-06-13T13:37:46-04:00</lastmod>
     <priority>0</priority>
   </url>
   
