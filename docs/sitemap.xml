@@ -44,6 +44,11 @@
   </url>
   
   <url>
+    <loc>https://blog.agilesyndro.me/posts/during-the-maintenance/</loc>
+    <lastmod>2019-06-17T23:05:02-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.agilesyndro.me/posts/terraform-modules-suck/</loc>
     <lastmod>2019-06-11T06:57:38-04:00</lastmod>
   </url>
