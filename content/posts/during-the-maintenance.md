@@ -23,8 +23,6 @@ Oh. You have family & kids?  Uhm, well... we kinda sorta scheduled the maintenan
 
 As a reader, you should understand that my company values me and my family, and they show that consistently. I'm not mad they scheduled this over Father's day because they take such great care of me. I'm just shocked that my company who shows such careful regard to their employees would pick this weekend. We've been waiting a year to get this out the door, the time is finally here, so nobody complained (loudly).
 
-Also, the Director of Infrastructure was out of the country, on a pre-scheduled family vacation, but you guys go ahead, you've practiced this.
-
 ## The show must go on
 
 I didn't plan on being a software engineer.  Much of my college degree is in theater technology. "The show must go on" is more than a magical mantra, it's life or death.  Nothing stops the theater show, and in the end, when the last curtain drops, the crowd is cheering, laughing, or crying. It's the best moment of the job. Theater is a well oiled machine though.  A stage manager and technical director work together in perfect unity. Everybody knows who to ask if they have questions.
@@ -51,6 +49,10 @@ Murphy will tell us that if it CAN go wrong, it will.  Your tools will also fail
 **Define your tools and your backup tools.** What tools will you use during the upgrade?  Does _EVERYBODY_ know what these tools are, and have credentials to them?  How will you page people late in the night?  What video conference system is the war-room using?  Where do we keep passwords? Keep a single document of tools used and make sure every tool has a backup.  Communicate changes to that document in a multi-modal format.  Something will fail you at the worst possible time, if people didn't get the information they need, your upgrade will be what fails.
 
 **Who is in charge?** In theater, you either report to the technical director or report to the stage manager. It's pretty much a decision of "is it on stage" or "off stage." You always know who to ask, and nobody else is authorized to make show altering decisions. If one of those two decision makers are out, the other person could take over both positions in a pinch.  Who owns your migration? Who is responsible for calling for a roll-back?  Who calls in the secondaries?  Who steps in if the director gets sick? Who keeps the maintenance window scope in-check? Have these discussions, and write down the answers ... and that's the best way to ensure you'll probably never need to use this knowledge. Murphy's Law hates a good plan.
+
+## What's Next
+
+We're still watching the system to make sure it settles into place nicely.  All systems look green so far.  Once we reach the end of this sprint, we'll retro as a team to discuss where we can do better next time. Let me reiterate, my company is amazing, and these things never go unheard. I am confident next time around will be even better. 
 
 It was a long weekend, and if you're up for [buying me a coffee](https://ko-fi.com/agilesyndrome), I'd be forever grateful.
 
