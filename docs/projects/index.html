@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <meta name="generator" content="Hugo 0.58.3" />
   <link rel="canonical" href="https://blog.agilesyndro.me/projects/">
@@ -32,7 +33,7 @@
 
   
   
-  <title>AgileSyndro.me | AgileSyndro.me</title>
+  <title>Projects | AgileSyndro.me</title>
   <script src="https://cdn.auth0.com/js/auth0/9.10/auth0.min.js"></script>
 
   
@@ -189,7 +190,7 @@
       
       
       
-      <a href="/projects" >
+      <a href="/projects" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -231,8 +232,22 @@
         <div>
           
   <main id="main">
-    <h1>AgileSyndro.me</h1>
+    <h1>Projects</h1>
     
+
+<h3 id="command-line-tools">Command Line Tools</h3>
+
+<p><a href="https://gitlab.com/agilesyndrome/totp">TOTP</a></p>
+
+<ul>
+<li>Generate MultiFactor auth codes on the command line.</li>
+<li>Great for automatically testing websites that require multi-factor authentication)</li>
+<li>My first Golang project! (Could use some code-review and style help)</li>
+</ul>
+
+<hr/>
+
+<h3 id="automations">Automations</h3>
 
   </main>
 
@@ -246,6 +261,9 @@
   
     Contact Me
   
+  <script>
+  jQuery.post("https://api.agilesyndro.me/webhook/agilesyndrome/analytics/coresite/no-response", {"path": "Projects"});
+  </script>
 </footer>
 
         </div>
