@@ -19,10 +19,17 @@ title: "Peg! A place to hang your (web)hooks."
 * GitHub WebHooks (Record all data about commits / PRs / etc )
 * Twilio (Inbound Voice Call Forwarding)
 * Twilio (Inbound SMS)
-* Website Analytics ( jQuery.post(...) )
+* Website Analytics ( jQuery.post )
+* iPhone Siri Shortcuts
 
 ### Why?
 
-Jenkins currently needs to be exposed to the public internet to allow Github Webhooks to function properly.  THis shouldn't be necessary.  API Gateway can queue up the request and later "re-play" it to a private Jenkins server based on the SQS information.  By saving the record into S3, we can reply it even if the Jenkins server is offline at the time the request comes in.
+* Jenkins currently needs to be exposed to the public internet to allow Github Webhooks to function properly.  THis shouldn't be necessary.  API Gateway can queue up the request and later "re-play" it to a private Jenkins server based on the SQS information.  By saving the record into S3, we can reply it even if the Jenkins server is offline at the time the request comes in.
 
+* Replayable Webhooks for testing
 
+* Replay and Redirect previously sent webhooks at a later date
+
+* GeoFencing - iPhone Shortcuts can ping the web api upon arrival/departure from specified locations. 
+
+* ?? The possibilities are somewhat endless when a versatile recording API
