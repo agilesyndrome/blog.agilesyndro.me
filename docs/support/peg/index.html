@@ -235,16 +235,35 @@
     <h1>Peg! A place to hang your (web)hooks.</h1>
     
 
-<h3 id="what-is-agilesyndrome-peg">What is AgileSyndrome peg?</h3>
+<h3 id="design">Design</h3>
+
+<ul>
+<li>AWS API Gateway listens to all requests towards <a href="https://api.agilesyndro.me/{tenant}/{service}/{queue">https://api.agilesyndro.me/{tenant}/{service}/{queue</a>}</li>
+<li>When a request is reeived it is immediately saved in a raw form, into s3://bucket/tenant/service/queue/request_id.json</li>
+<li>Once the save is complete, an Amazon Simple Queue service gets a notification with the location of the S3 object.</li>
+<li>Finally, the API Gateway redirects to <a href="https://api.agilesyndro.me/handler/{service}/{tenant}/{queue}/{request_id">https://api.agilesyndro.me/handler/{service}/{tenant}/{queue}/{request_id</a>}</li>
+<li>Various service_handlers can now process the request and return data.  See services below.</li>
+</ul>
+
+<h3 id="future-work">Future Work</h3>
+
+<ul>
+<li>The requestId will be logged into DynamoDB</li>
+<li>The appropiate <code>service_handler</code> will be called.</li>
+</ul>
 
 <h3 id="what-services-are-currently-supported">What services are currently supported?</h3>
 
 <ul>
-<li>GitHub WebHooks</li>
+<li>GitHub WebHooks (Record all data about commits / PRs / etc )</li>
 <li>Twilio (Inbound Voice Call Forwarding)</li>
 <li>Twilio (Inbound SMS)</li>
-<li>Website Analytics</li>
+<li>Website Analytics ( jQuery.post(&hellip;) )</li>
 </ul>
+
+<h3 id="why">Why?</h3>
+
+<p>Jenkins currently needs to be exposed to the public internet to allow Github Webhooks to function properly.  THis shouldn&rsquo;t be necessary.  API Gateway can queue up the request and later &ldquo;re-play&rdquo; it to a private Jenkins server based on the SQS information.  By saving the record into S3, we can reply it even if the Jenkins server is offline at the time the request comes in.</p>
 
   </main>
 
@@ -256,7 +275,7 @@
     </label>
   </div>
   
-    Contact Me
+    2019
   
   <script>
   jQuery.post("https://api.agilesyndro.me/webhook/agilesyndrome/analytics/coresite/no-response", {"path": "Peg! A place to hang your (web)hooks."});
