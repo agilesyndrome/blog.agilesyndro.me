@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on AgileSyndro.me</title>
-    <link>https://blog.agilesyndro.me/tags/</link>
+    <link>https://agilesyndro.me/tags/</link>
     <description>Recent content in Tags on AgileSyndro.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Jun 2019 06:00:00 -0400</lastBuildDate>
     
-	<atom:link href="https://blog.agilesyndro.me/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://agilesyndro.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ansible</title>
-      <link>https://blog.agilesyndro.me/tags/ansible/</link>
+      <link>https://agilesyndro.me/tags/ansible/</link>
       <pubDate>Tue, 18 Jun 2019 06:00:00 -0400</pubDate>
       
-      <guid>https://blog.agilesyndro.me/tags/ansible/</guid>
+      <guid>https://agilesyndro.me/tags/ansible/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Communication</title>
-      <link>https://blog.agilesyndro.me/tags/communication/</link>
+      <link>https://agilesyndro.me/tags/communication/</link>
       <pubDate>Tue, 18 Jun 2019 06:00:00 -0400</pubDate>
       
-      <guid>https://blog.agilesyndro.me/tags/communication/</guid>
+      <guid>https://agilesyndro.me/tags/communication/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Love</title>
-      <link>https://blog.agilesyndro.me/tags/love/</link>
+      <link>https://agilesyndro.me/tags/love/</link>
       <pubDate>Tue, 18 Jun 2019 06:00:00 -0400</pubDate>
       
-      <guid>https://blog.agilesyndro.me/tags/love/</guid>
+      <guid>https://agilesyndro.me/tags/love/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Terraform</title>
-      <link>https://blog.agilesyndro.me/tags/terraform/</link>
+      <link>https://agilesyndro.me/tags/terraform/</link>
       <pubDate>Tue, 18 Jun 2019 06:00:00 -0400</pubDate>
       
-      <guid>https://blog.agilesyndro.me/tags/terraform/</guid>
+      <guid>https://agilesyndro.me/tags/terraform/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AWS</title>
-      <link>https://blog.agilesyndro.me/tags/aws/</link>
+      <link>https://agilesyndro.me/tags/aws/</link>
       <pubDate>Mon, 10 Jun 2019 10:28:35 -0400</pubDate>
       
-      <guid>https://blog.agilesyndro.me/tags/aws/</guid>
+      <guid>https://agilesyndro.me/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cost Control</title>
-      <link>https://blog.agilesyndro.me/tags/cost-control/</link>
+      <link>https://agilesyndro.me/tags/cost-control/</link>
       <pubDate>Mon, 10 Jun 2019 10:28:35 -0400</pubDate>
       
-      <guid>https://blog.agilesyndro.me/tags/cost-control/</guid>
+      <guid>https://agilesyndro.me/tags/cost-control/</guid>
       <description></description>
     </item>
     
