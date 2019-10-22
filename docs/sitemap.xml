@@ -10,37 +10,31 @@
   <url>
     <loc>https://blog.agilesyndro.me/tags/ansible/</loc>
     <lastmod>2019-06-17T23:05:02-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.agilesyndro.me/tags/communication/</loc>
     <lastmod>2019-06-17T23:05:02-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.agilesyndro.me/tags/love/</loc>
     <lastmod>2019-06-17T23:05:02-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.agilesyndro.me/posts/</loc>
     <lastmod>2019-06-22T16:03:14-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.agilesyndro.me/tags/</loc>
     <lastmod>2019-06-17T23:05:02-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.agilesyndro.me/tags/terraform/</loc>
     <lastmod>2019-06-17T23:05:02-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -61,18 +55,28 @@
   <url>
     <loc>https://blog.agilesyndro.me/tags/aws/</loc>
     <lastmod>2019-06-10T16:38:21-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.agilesyndro.me/tags/cost-control/</loc>
     <lastmod>2019-06-10T16:38:21-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.agilesyndro.me/</loc>
     <lastmod>2019-06-10T15:16:34-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.agilesyndro.me/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.agilesyndro.me/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.agilesyndro.me/terms/</loc>
   </url>
   
 </urlset>
