@@ -19,7 +19,7 @@ disqusShortname = "agilesyndrome"
 [params]
 	author = "Drew E. Easley"
 	description = "Empowering the Open Source"
-	footer = "Made with [Hugo](https://gohugo.io/) Themed with [Cupper](https://github.com/agilesyndrome/cupper-hugo-theme)"
+	footer = "Contact Me"
         heapSiteId = "1793759258"
 
 [menu]
@@ -30,12 +30,16 @@ disqusShortname = "agilesyndrome"
   [[menu.nav]]
     name = "Blog"
     url = "/posts"
-    weight = 2
+    weight = 20
   [[menu.nav]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 3
+    name = "Projects"
+    url = "/projects"
+    weight = 30
+  [[menu.nav]]
+    name = "Contact"
+    url = "/contact"
+    weight = 40
   [[menu.nav]]
     name = "RSS"
     url = "/index.xml"
-    weight = 5
+    weight = 50
