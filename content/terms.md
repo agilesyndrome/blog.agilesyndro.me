@@ -1,5 +1,5 @@
 ---
-title: "AgileSyndro.me"
+title: "Terms & Conditions"
 ---
 
 ### Disclaimer
