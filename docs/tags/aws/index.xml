@@ -13,10 +13,10 @@
     
     <item>
       <title>1998 is calling, and it wants a website</title>
-      <link>https://agilesyndro.me/posts/1998-is-calling/</link>
+      <link>https://agilesyndro.me/blog/1998-is-calling/</link>
       <pubDate>Mon, 10 Jun 2019 10:28:35 -0400</pubDate>
       
-      <guid>https://agilesyndro.me/posts/1998-is-calling/</guid>
+      <guid>https://agilesyndro.me/blog/1998-is-calling/</guid>
       <description>It&amp;rsquo;s 1998 and the local robotics club wants a website. You&amp;rsquo;ve got this, you know HTML, some simple JavaScript and how to use Windows Paint to re-size images. The website design isn&amp;rsquo;t the problem, it never really is. Now comes the hard part, let&amp;rsquo;s get our web server up and running:
  Red Hat 5.2 Apache v1.3 DNS A Record FTP Server for transfering the files  But let&amp;rsquo;s not forget what you had to tell the team:</description>
     </item>
