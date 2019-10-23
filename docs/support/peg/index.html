@@ -258,12 +258,23 @@
 <li>GitHub WebHooks (Record all data about commits / PRs / etc )</li>
 <li>Twilio (Inbound Voice Call Forwarding)</li>
 <li>Twilio (Inbound SMS)</li>
-<li>Website Analytics ( jQuery.post(&hellip;) )</li>
+<li>Website Analytics ( jQuery.post )</li>
+<li>iPhone Siri Shortcuts</li>
 </ul>
 
 <h3 id="why">Why?</h3>
 
-<p>Jenkins currently needs to be exposed to the public internet to allow Github Webhooks to function properly.  THis shouldn&rsquo;t be necessary.  API Gateway can queue up the request and later &ldquo;re-play&rdquo; it to a private Jenkins server based on the SQS information.  By saving the record into S3, we can reply it even if the Jenkins server is offline at the time the request comes in.</p>
+<ul>
+<li><p>Jenkins currently needs to be exposed to the public internet to allow Github Webhooks to function properly.  THis shouldn&rsquo;t be necessary.  API Gateway can queue up the request and later &ldquo;re-play&rdquo; it to a private Jenkins server based on the SQS information.  By saving the record into S3, we can reply it even if the Jenkins server is offline at the time the request comes in.</p></li>
+
+<li><p>Replayable Webhooks for testing</p></li>
+
+<li><p>Replay and Redirect previously sent webhooks at a later date</p></li>
+
+<li><p>GeoFencing - iPhone Shortcuts can ping the web api upon arrival/departure from specified locations.</p></li>
+
+<li><p>?? The possibilities are somewhat endless when a versatile recording API</p></li>
+</ul>
 
   </main>
 
