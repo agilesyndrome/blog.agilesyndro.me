@@ -4,7 +4,10 @@ title: "Projects"
 
 ### Open Source Contributions
 
-* [Hygieia/Cloud-Aws-Colector](https://github.com/Hygieia/hygieia-cloud-aws-collector/pull/7)
+* [Hygieia/Cloud-Aws-Collector](https://github.com/Hygieia/hygieia-cloud-aws-collector/pull/7)
+
+### Web Services
+[Peg. A place to hang your (web)hooks](https://agilesyndro.me/support/peg)
 
 ### Command Line Tools
 
@@ -16,27 +19,12 @@ title: "Projects"
 
 <hr/>
 
-### Automations
-
 ### Cloud Solutions
 
 * Amazon Web Services
 * Heroku
 * Azure
 * OpenStack
-
-### Infrastructure Tools
-
-* Docker
-* Hashicorp (Puppet/Packer/Terraform/Vault)
-* AWS CloudFormation
-* AWS Lambda / API Gateways
-
-### Storage Solutions
-
-* Amazon S3
-* 
-* Wasabi S3
 
 ### Third Party Integrations
 

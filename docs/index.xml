@@ -82,8 +82,9 @@ Within a few days there were segments of code everywhere to create an EC2 instan
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://agilesyndro.me/projects/</guid>
-      <description> Open Source Contributions  Hygieia/Cloud-Aws-Colector  Command Line Tools TOTP
- Generate MultiFactor auth codes on the command line. Great for automatically testing websites that require multi-factor authentication) My first Golang project! (Could use some code-review and style help)   Automations Cloud Solutions  Amazon Web Services Heroku Azure OpenStack  Infrastructure Tools  Docker Hashicorp (Puppet/Packer/Terraform/Vault) AWS CloudFormation AWS Lambda / API Gateways  Storage Solutions  Amazon S3  Wasabi S3  Third Party Integrations  Twilio SMS Electronic Health Records (including FHIR)  </description>
+      <description> Open Source Contributions  Hygieia/Cloud-Aws-Collector  Web Services Peg. A place to hang your (web)hooks
+Command Line Tools TOTP
+ Generate MultiFactor auth codes on the command line. Great for automatically testing websites that require multi-factor authentication) My first Golang project! (Could use some code-review and style help)   Cloud Solutions  Amazon Web Services Heroku Azure OpenStack  Third Party Integrations  Twilio SMS Electronic Health Records (including FHIR)  </description>
     </item>
     
     <item>
