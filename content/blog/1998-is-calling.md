@@ -8,26 +8,26 @@ tags: [AWS, Cost Control]
 
 It's 1998 and the local robotics club wants a website.  You've got this, you know HTML, some simple JavaScript and how to use Windows Paint to re-size images. The website design isn't the problem, it never really is.  Now comes the hard part, let's get our web server up and running:
 
-* Red Hat 5.2
-* Apache v1.3
-* DNS A Record
-* FTP Server for transfering the files
+  * Red Hat 5.2
+  * Apache v1.3
+  * DNS A Record
+  * FTP Server for transfering the files
 
 But let's not forget what you had to tell the team:
 
-* __It's slow:__ Your images have to be small because your server isn't very powerful, but traffic should be light so performance shouldn't be an issue yet.
-* __It's unreliable:__ The server might reboot for some patches, and your website will be down for a few minutes, but you'll try to make that happen at night or weekends. Honestly, you just might reboot the server because you fucked up something else and a reboot is the only way to fix it.
-* __Your IP address changes:__ The website might go down if your Home IP address changes.  The team isn't paying you anything, and you don't want to pay big money to host the website somewhere else.  Your dynamic DNS script should take care of any changes within a 5-10 minute period.
+  * __It's slow:__ Your images have to be small because your server isn't very powerful, but traffic should be light so performance shouldn't be an issue yet.
+  * __It's unreliable:__ The server might reboot for some patches, and your website will be down for a few minutes, but you'll try to make that happen at night or weekends. Honestly, you just might reboot the server because you fucked up something else and a reboot is the only way to fix it.
+  * __Your IP address changes:__ The website might go down if your Home IP address changes.  The team isn't paying you anything, and you don't want to pay big money to host the website somewhere else.  Your dynamic DNS script should take care of any changes within a 5-10 minute period.
 
 ## A better way
 
 There has to be a better way, right? It's 2006 and along comes Amazon Web Services to save the day.  By 2008 GitHub is here too.  Let's look at a modern stack for a team website:
 
-* Static files in GitHub
-* Amazon S3 Bucket for public hosting
-* Route 53 Domain Name
-* CloudFront for Speed and Security (We've got HTTPS! Imagine doing that in 1998.)
-* Perhaps even some Terraform to automate all the things.
+  * Static files in GitHub
+  * Amazon S3 Bucket for public hosting
+  * Route 53 Domain Name
+  * CloudFront for Speed and Security (We've got HTTPS! Imagine doing that in 1998.)
+  * Perhaps even some Terraform to automate all the things.
 
 Everybody wants a website.  Your friend owns a medical practice, your son's soccer team needs one, your neighbor's soap making business is booming.  You've got websites you manage, which isn't a problem, but suddenly your Amazon Web Services bill is $15+/month for websites you don't make any money on.  It's only a little bit of money, but that's okay. You don't mind.
 
