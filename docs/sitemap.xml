@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://agilesyndro.me/tags/aws/</loc>
+    <lastmod>2019-11-11T19:56:22-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agilesyndro.me/blog/</loc>
+    <lastmod>2019-11-11T19:56:22-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agilesyndro.me/tags/ebs/</loc>
+    <lastmod>2019-11-11T19:56:22-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agilesyndro.me/tags/storage/</loc>
+    <lastmod>2019-11-11T19:56:22-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agilesyndro.me/tags/</loc>
+    <lastmod>2019-11-11T19:56:22-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agilesyndro.me/blog/which-ebs-storage/</loc>
+    <lastmod>2019-11-11T19:56:22-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://agilesyndro.me/blog/how-was-your-day/</loc>
     <lastmod>2019-10-22T13:03:59-04:00</lastmod>
   </url>
@@ -13,22 +43,12 @@
   </url>
   
   <url>
-    <loc>https://agilesyndro.me/blog/</loc>
-    <lastmod>2019-10-22T13:03:59-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://agilesyndro.me/tags/communication/</loc>
     <lastmod>2019-10-22T13:03:59-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://agilesyndro.me/tags/love/</loc>
-    <lastmod>2019-10-22T13:03:59-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://agilesyndro.me/tags/</loc>
     <lastmod>2019-10-22T13:03:59-04:00</lastmod>
   </url>
   
@@ -49,11 +69,6 @@
   
   <url>
     <loc>https://agilesyndro.me/blog/1998-is-calling/</loc>
-    <lastmod>2019-10-22T13:03:59-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://agilesyndro.me/tags/aws/</loc>
     <lastmod>2019-10-22T13:03:59-04:00</lastmod>
   </url>
   
@@ -84,7 +99,7 @@
   
   <url>
     <loc>https://agilesyndro.me/projects/</loc>
-    <lastmod>2019-10-22T18:50:09-04:00</lastmod>
+    <lastmod>2019-10-22T22:35:19-04:00</lastmod>
   </url>
   
   <url>
