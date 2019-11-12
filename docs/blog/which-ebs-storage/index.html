@@ -7,7 +7,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <meta name="generator" content="Hugo 0.58.3" />
-  <link rel="canonical" href="https://agilesyndro.me/posts/terraform-modules-suck/">
+  <link rel="canonical" href="https://agilesyndro.me/blog/which-ebs-storage/">
 
   
 
@@ -33,7 +33,7 @@
 
   
   
-  <title>Terraform Modules Suck, but you should still use them | AgileSyndro.me</title>
+  <title>Which EBS storage solution do I need? | AgileSyndro.me</title>
   <script src="https://cdn.auth0.com/js/auth0/9.10/auth0.min.js"></script>
 
   
@@ -140,7 +140,7 @@
   <div>
     <div class="intro">
       <a class="logo" href="/" aria-label="AgileSyndro.me home page">
-        <img src="https://agilesyndro.me/images/logo.svg" alt="">
+        <img src="https://agilesyndro.me/images/logo.svg" alt="Our logo">
       </a>
       <p class="library-desc">
         
@@ -177,7 +177,7 @@
       
       
       
-      <a href="/posts" >
+      <a href="/blog" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -228,252 +228,17 @@
 </nav>
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
-    <h1>
-      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      Terraform Modules Suck, but you should still use them
-    </h1>
+    <h1>Which EBS storage solution do I need?</h1>
+    <p>Figuring out which EBS storage type to chooose can be a dautning task.  Try out AgileSyndrome&rsquo;s EBS Storage Solution test for a suggestion on what might work best for your next project! I would be glad to discuss your next storage needs in more detail too.</p>
 
-    <div class="date">
-      
-      
-      <strong aria-hidden="true">Publish date: </strong>Jun 10, 2019
-      
-        
-          <br>
-          <strong aria-hidden="true">Last updated: </strong>Jun 11, 2019
-        
-      
-    </div>
-
-    
-      <div class="tags">
-        <strong aria-hidden="true">Tags: </strong>
-        <ul aria-label="tags">
-          
-            <li>
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              
-              <a href="https://agilesyndro.me/tags/terraform/">Terraform</a>
-            </li>
-          
-        </ul>
-      </div>
-    
-    
-    
-      
-
-  <nav class="toc" aria-labelledby="toc-heading">
-    <h2 id="toc-heading">Table of contents</h2>
-    <ol>
-      
-        <li>
-          
-          
-          
-          
-          <a href="#terraform">
-            Terraform
-          </a>
-        </li>
-      
-        <li>
-          
-          
-          
-          
-          <a href="#terraform-modules">
-            Terraform Modules
-          </a>
-        </li>
-      
-        <li>
-          
-          
-          
-          
-          <a href="#but-then-the-problems-hit">
-            But then the problems hit
-          </a>
-        </li>
-      
-        <li>
-          
-          
-          
-          
-          <a href="#the-terraform-module-manifesto">
-            The Terraform Module Manifesto
-          </a>
-        </li>
-      
-        <li>
-          
-          
-          
-          
-          <a href="#why-these-matter">
-            Why these matter
-          </a>
-        </li>
-      
-        <li>
-          
-          
-          
-          
-          <a href="#other-lessons">
-            Other Lessons?
-          </a>
-        </li>
-      
-        <li>
-          
-          
-          
-          
-          <a href="#the-dictionary">
-            The Dictionary
-          </a>
-        </li>
-      
-    </ol>
-  </nav>
-
-
-    
-
-    
-
-<h2 id="terraform">Terraform</h2>
-
-<p>Like so many other people I jumped into Terraform right away.  This was the answer I was looking for.  It could provide an automated way to store AWS configurations in source control.  It also let me try out Azure, Google, and many other providers in a cloud-agnostic (sorta) kinda of way.</p>
-
-<p>Within a few days there were segments of code everywhere to create an EC2 instance.  Everybody on my team made their own Terraform code.</p>
-
-<h2 id="terraform-modules">Terraform Modules</h2>
-
-<p>Hey!  Let&rsquo;s throw all this code together into a re-usable component, so the next time we need to a test environment, we can just use a module to do it!  We can have a &ldquo;test environment&rdquo; module that we re-use everywhere. We all rejoiced, because who doesn&rsquo;t like reusable code!</p>
-
-<h2 id="but-then-the-problems-hit">But then the problems hit</h2>
-
-<p>&ldquo;Uhm, hey, so you made a change to this module for your project, but it&rsquo;s going to cause my EC2 instances to be destroyed and re-created.&rdquo; ~ Every infra developer on our team. The module layout being used was very very brittle and it needed to be changed, fast.</p>
-
-<p>Terraform modules are a great way to keep you from re-writing your code over and over #DRY but can you really test that this underlying module code does what it&rsquo;s supposed to do in EVERY instance where it&rsquo;s been used in your Terraform stack?  The worst offenders for changing this variable are when somebody would update the module to add some form of if/then/else logic into the module (Terraform doesn&rsquo;t really support this natively, but trust sme, you can hack some pretty awesome shit into vanilla Terraform files if you know what you&rsquo;re doing.)</p>
-
-<p>Ultimately, the team gave up on modules as a whole, but here&rsquo;s what was missing:</p>
-
-<h2 id="the-terraform-module-manifesto">The Terraform Module Manifesto</h2>
-
-<ul>
-<li>I <strong>WILL</strong> use Terraform Modules to keep my code DRY</li>
-<li>I will <strong>write a test</strong> that consumes my new Terraform module.</li>
-<li>I will <strong>NOT</strong> make an all-encompassisng module.  Ten modules are better than one.</li>
-<li>I will <strong>version pin</strong> my use of modules.</li>
-</ul>
-
-<h2 id="why-these-matter">Why these matter</h2>
-
-<ul>
-<li><p><strong>Keep your code DRY</strong> I don&rsquo;t think I need to explain this one.  Use a Terraform module anytime you&rsquo;re going to be copying the same style of resource creation. If your organization demands that you spin up an AWS S3 bucket with a certain bucket policy, tagged with same same five tags, this is a great reason to write a Terraform module.</p></li>
-
-<li><p><strong>Module Tests</strong> In our organization we decided on a simple folder structure of <code>modules/module_name</code> and <code>tests/module_name</code>.  Each newly created module must create both folders.  In the tests folder, we create a simple test that allows a <code>terraform plan</code> statement to execute against the module.  We don&rsquo;t apply the test right now, we might in the future, but this gives the CI system something to go by to ensure you&rsquo;ve properly added all of the required variables, your code will at least pass a Terraform plan statement, and the module exists.  It isn&rsquo;t much, but it&rsquo;s a good start.  The other have of these test cases is to provide other team members with an example or two of how the module should be called!  Which variables can be optional, and how that impacts the plan.</p></li>
-
-<li><p><strong>The All encompassing module</strong> So you need an S3 bucket created with a few tags?  Great choice for a module.  It&rsquo;s a private module, with logging and versioning.  Oh, the next guy doesn&rsquo;t need logging, but he needs lifecycle rules?  Let&rsquo;s update the module (it&rsquo;s version pinned right?) and craft some <code>count=0</code> statements, and maybe a <code>ternary ? true : false</code> logic statement or two, and Viola! Now your module can do both.  Tomorrow I&rsquo;m going to show you how it can also setup public S3 buckets too!  &lt;&ndash; Story of our lives, but stop, just stop.  A Terraform module should have a purpose outlined in it&rsquo;s Readme file.  &ldquo;I help you create a Private S3 bucket that is versioned and logged&rdquo; Your readme file should include a scope statement about things this module can do, but you might want to consider things you&rsquo;re afraid somebody else might try to make it do.</p></li>
-</ul>
-
-<h3 id="example-scope-statement">Example Scope Statement</h3>
-
-<ul>
-<li>&ldquo;I help you create  Private S3 bucket that is versioned and logged&rdquo;</li>
-<li>Things this module might do in the future : Custom Bucket Policy passed in as JSON</li>
-
-<li><p>This it should not do: Making Public Buckets, Buckets with LifeCycle rules</p></li>
-
-<li><p><strong>Version Pinning</strong> Terraform modules help a lot, but they can be fluid and constantly changing.  When you consume a Terraform module you need to work on a version pinning system!  This means no writing Terraform modules and referencing them into your application with <code>../modules/module_name</code> format!</p></li>
-</ul>
-
-<p><strong>Seriously, stop here and make yourself a new Git repo for those modules.</strong> At a minimum, you can now use the Terraform &ldquo;git revision selection&rdquo; git::<a href="https://example.com/vpc.git?ref=v1.2.0">https://example.com/vpc.git?ref=v1.2.0</a> to specify a Git tag of your module&rsquo;s version.  You now have version pinned modules (with a bit of git tag work on the new module push.)</p>
-
-<p>Our team went a bit further and enabled a CI system which can:
- * Identify what module inside the repo changed
- * Check to see <code>modules/changed_module</code> directory passes the <code>terraform fmt</code> command for proper formatting.
- * Executes a <code>terraform plan</code> in the <code>tests/changed_module</code> folder (Plan only, it&rsquo;s a symantic thing at this point. We might apply/destroy the tests later)
- * Keeps track of each module&rsquo;s individual version number!
- * Bumps the module version, and creates a .zip file of the <code>modules/changed_module</code> folder when changes to master are pushed.  These .zip files are pushed to an internal artifact server so we can consume them using vanilla HTTP internally.</p>
-
-<h2 id="other-lessons">Other Lessons?</h2>
-
-<p>What are other lessons you&rsquo;ve learned from using (or not using) Terraform modules?  What do you wish the world knew before you got started (a.k.a. trapped) in your current Terraform setup?</p>
-
-<h2 id="the-dictionary">The Dictionary</h2>
-
-<table>
-<thead>
-<tr>
-<th align="left">Definition</th>
-<th align="left">Meaning</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">AWS</td>
-<td align="left">Amazon Web Services</td>
-</tr>
-
-<tr>
-<td align="left">DRY</td>
-<td align="left">Don&rsquo;t Repeat Yourself</td>
-</tr>
-
-<tr>
-<td align="left">Coffee</td>
-<td align="left">What I run on.  Like what you read? Consider buying me a <a href="https://ko-fi.com/agilesyndrome">Coffee</a></td>
-</tr>
-</tbody>
-</table>
+<script type="text/javascript" src="https://form.jotform.com/jsform/93144171261147"></script>
 
   </main>
-  <div id="disqus-container">
-  
-    <button id="disqus-button" onclick="showComments()">Show comments</button>
-    <div id="disqus-comments">
-        <div id="disqus_thread">
-        </div>
-        <script type="application/javascript">
-          function showComments() {
-            // Config
-var disqus_config = function () {
-};
-// Build and append comments 
-var d = document;
-var s = d.createElement('script');
-s.async = true;
-s.src = '//' + "agilesyndrome" + '.disqus.com/embed.js';
-s.setAttribute('data-timestamp', + new Date());
-(d.head || d.body).appendChild(s);
-            // Remove button
-var disqusButton = document.getElementById('disqus-button');
-disqusButton.parentNode.removeChild(disqusButton); 
-// Un-hide comments
-var disqusComments = document.getElementById('disqus-comments');
-disqusComments.style.display = 'block'; 
-          }
-        </script>
-      <noscript>Enable JavaScript to view Disqus comments.</noscript>
-    </div>
-  
-</div>
-
 
           <footer role="contentinfo">
   <div>
@@ -483,10 +248,10 @@ disqusComments.style.display = 'block';
     </label>
   </div>
   
-    Contact Me
+    2019
   
   <script>
-  jQuery.post("https://api.agilesyndro.me/webhook/agilesyndrome/analytics/coresite/no-response", {"path": "Terraform Modules Suck, but you should still use them"});
+  jQuery.post("https://api.agilesyndro.me/webhook/agilesyndrome/analytics/coresite/no-response", {"path": "Which EBS storage solution do I need?"});
   </script>
 </footer>
 
