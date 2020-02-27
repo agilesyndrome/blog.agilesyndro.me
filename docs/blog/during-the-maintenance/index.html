@@ -4,9 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <meta name="generator" content="Hugo 0.58.3" />
+  <meta name="generator" content="Hugo 0.65.3" />
   <link rel="canonical" href="https://agilesyndro.me/blog/during-the-maintenance/">
 
   
@@ -26,7 +25,7 @@
   <link rel="stylesheet" type="text/css" href="https://agilesyndro.me/css/styles.css">
 
   <style id="inverter" media="none">
-    html { filter: invert(100%) }
+    .intro-and-nav, .main-and-footer { filter: invert(100%) }
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
@@ -34,14 +33,6 @@
   
   
   <title>What happened during the maintenance window... | AgileSyndro.me</title>
-  <script src="https://cdn.auth0.com/js/auth0/9.10/auth0.min.js"></script>
-
-  
-  <script type="text/javascript">
-    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-      heap.load("1793759258");
-  </script>
-  
 </head>
 
   <body>
@@ -140,7 +131,7 @@
   <div>
     <div class="intro">
       <a class="logo" href="/" aria-label="AgileSyndro.me home page">
-        <img src="https://agilesyndro.me/images/logo.svg" alt="Our logo">
+        <img src="https://agilesyndro.me/images/logo.svg" alt="">
       </a>
       <p class="library-desc">
         
@@ -228,67 +219,38 @@
 </nav>
   </div>
 </header>
-
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>What happened during the maintenance window...</h1>
-    
-
-<h2 id="epic-migration">Epic Migration</h2>
-
+    <h2 id="epic-migration">Epic Migration</h2>
 <p>It was one of those once-a-year crazy maintenance weekends.  You know the kind where we&rsquo;ve got to take the whole stack down for a weekend while we migrate half a billion records from an old system to a shiny new one.  The kind where nobody wants to discuss the rollback strategy because it&rsquo;s as ugly as the upgrade.  Let me say a million things went right during this migration, and it goes down in the books as an epic success.  Nobody wants to read a blog post about success though, it&rsquo;s boring, beer was had, and the upgrade completed successfully. Tada.  I do want to talk about what we could have done better, and preface it with what my role in the upgrade was and why I still feel inclined to write about it.</p>
-
 <p>We all work remotely. On the core upgrade team, we have developers who wrote the code and infrastructure engineers who spun up the new services. It&rsquo;s a great team, and the upgrade was in some of the most capable hands I&rsquo;ve ever met.  I&rsquo;m honored to work with them.  I work on the infrastructure team, but my role relates to the other systems that were not upgraded this time around.  With a very large upgrade, management called an &ldquo;all-hands-on-deck&rdquo; signal. We were all ready to work all night to do whatever it took to make the magic happen. The rest of this post is my perspective of what could have been better, in an already successful migration.</p>
-
 <h2 id="do-you-need-me">Do you need me?</h2>
-
 <p>Friday afternoon rolls around. Those who had been planning the migration knew their tasks and had practiced several times.  The other engineers, myself included, started to realize nobody gave us any tasks to do. We were &ldquo;on deck&rdquo;, ready and willing, with nothing assigned to us to do.  Do they need us on the call all night? Will they page us if they need us?  We speak up and ask.  We get some great news.  &ldquo;Get some rest tonight, and if we need you in the middle of the night, we&rsquo;ll reach out.&rdquo;</p>
-
 <p>Let me tell you, &ldquo;reach out&rdquo; is a phrase that incites panic as it remains remarkably vague. I&rsquo;m a deep sleeper.  What tone on my phone should I be listening to? A bit of discussion goes by about using Slack, E-Mail, Text Messages, Phone Calls, and finally we decided on the obvious choice - manually raising an &ldquo;on-call&rdquo; incident to reach those who are asleep. The on-call app can pretty much wake the dead three towns over.  We all know its incessant text messaging, phone calls, and app notifications that seem to ring cacophonously on all my devices at once.</p>
-
 <p>I eventually sleep that night, but not very well. I&rsquo;m constantly wondering what&rsquo;s going on, and when I should join the call.  Should I join the call on Saturday?  They said they&rsquo;d page me if they need me.  When I wake up, Slack history tells me that the primary engineers took a small siesta and would get back together later. I make a pot of coffee and have some breakfast.  I still don&rsquo;t know if I&rsquo;m wanted in the war-room, but again, I&rsquo;m waiting on the sidelines.  I read every Slack message that day, glued to my phone, ever non-present to my family and kids this weekend.</p>
-
-<h2 id="father-s-day-weekend">Father&rsquo;s Day Weekend</h2>
-
+<h2 id="fathers-day-weekend">Father&rsquo;s Day Weekend</h2>
 <p>Oh. You have family &amp; kids?  Uhm, well&hellip; we kinda sorta scheduled the maintenance window right over Father&rsquo;s day. We didn&rsquo;t mean to, but it&rsquo;s just the one weekend that worked out between this issue or that issue. Truthfully we probably didn&rsquo;t look at the holiday schedule and see what day it was, but we are really sorry.</p>
-
 <p>As a reader, you should understand that my company values me and my family, and they show that consistently. I&rsquo;m not mad they scheduled this over Father&rsquo;s day because they take such great care of me. I&rsquo;m just shocked that my company who shows such careful regard to their employees would pick this weekend. We&rsquo;ve been waiting a year to get this out the door, the time is finally here, so nobody complained (loudly).</p>
-
 <h2 id="the-show-must-go-on">The show must go on</h2>
-
 <p>I didn&rsquo;t plan on being a software engineer.  Much of my college degree is in theater technology. &ldquo;The show must go on&rdquo; is more than a magical mantra, it&rsquo;s life or death.  Nothing stops the theater show, and in the end, when the last curtain drops, the crowd is cheering, laughing, or crying. It&rsquo;s the best moment of the job. Theater is a well oiled machine though.  A stage manager and technical director work together in perfect unity. Everybody knows who to ask if they have questions.</p>
-
 <p>Back in software land, halfway through the maintenance window the primary infrastructure engineer lost power and switched to a cell-phone hotspot on laptop battery power. Crisis averted&hellip; until the laptop battery dies. I thought to myself, I wonder who on my team is the secondary engineer for this system? I looked at the infra ownership doc and&hellip; the secondary ownership field is blank. That&rsquo;s right folks, it&rsquo;s him or bust. We were in the middle of migrating half a billion records from one system to another, and &ldquo;Failure is not an option.&rdquo; We didn&rsquo;t have a clear plan for what would have happened if he wasn&rsquo;t available anymore.  The primary team did a magnificent job, but the fear that <strong>I</strong> would somehow be selected to stand in for him was growing larger. I was sweating, and I hadn&rsquo;t even been called to step out of the sidelines.  I hadn&rsquo;t been involved in the rehearsal migrations.  I had a copy of the playbook that I printed, highlighted and understood, but those are just words on paper.  I learn by doing, and I hadn&rsquo;t done yet. Nobody had asked me to, and I had somewhat stupidly assumed somebody else was already in that slot. Thankfully, the migration continued without much trouble, and I continued to read the status update messages from the sidelines.</p>
-
-<p>We prepare for system failure, but do we prepare for &ldquo;people failure&rdquo;? We all work remotely.  What if the lead developer&rsquo;s father had a heart attack? Perhaps a tornado is currently tearing its way through Raleigh. Children get sick, wives get angry, dogs run away, cars break down, hotspots fail, construction crews slice fiber, you name it, it happens. As an infrastructure engineer, I make redundancy a part of my job, but I realized my focus was on redundant technologies. I didn&rsquo;t call for a flag on the play when there was no redundancy in the people involved this weekend.<br />
+<p>We prepare for system failure, but do we prepare for &ldquo;people failure&rdquo;? We all work remotely.  What if the lead developer&rsquo;s father had a heart attack? Perhaps a tornado is currently tearing its way through Raleigh. Children get sick, wives get angry, dogs run away, cars break down, hotspots fail, construction crews slice fiber, you name it, it happens. As an infrastructure engineer, I make redundancy a part of my job, but I realized my focus was on redundant technologies. I didn&rsquo;t call for a flag on the play when there was no redundancy in the people involved this weekend.<br>
 It could have been much worse for us.</p>
-
-<h2 id="i-plan-for-a-thing-or-two-because-i-ve-seen-a-thing-or-two">I plan for a thing or two because I&rsquo;ve seen a thing or two.</h2>
-
+<h2 id="i-plan-for-a-thing-or-two-because-ive-seen-a-thing-or-two">I plan for a thing or two because I&rsquo;ve seen a thing or two.</h2>
 <p>You can&rsquo;t plan for everything, but you can have a plan for anything. On a previous maintenance opportunity, the call was delayed an hour or two&hellip; because one of our developers lived on a farm, and somebody left the gate to the pasture open.  His cows were roaming down the street.  Yup. It&rsquo;s 2019 and we&rsquo;re delaying our software update because of some cows.</p>
-
 <p>Murphy will tell us that if it CAN go wrong, it will.  Your tools will also fail you.  Google will have a multi-regional outage and your conference bridge won&rsquo;t work.  Your pager system will fail and nobody will know your phone number.  (Do you have your team&rsquo;s numbers in your cellphone, or is that what Slack is for?) Slack will stop working (but just for some of your team.) Have multiple solutions for every tool involved. Keep those important passwords locally (encrypted) just in case your password management tool is down.</p>
-
-<h2 id="the-tl-dr">The TL;DR</h2>
-
+<h2 id="the-tldr">The TL;DR</h2>
 <p><strong>Do you need me?</strong> This should not be a question any engineer should have to ask during a maintenance window.  Identify your primary engineers, who are your secondaries, and the tertiaries if you need them.  Identify a solution that works to wake up people in the middle of the night.  Tell your secondaries, in no uncertain terms, if you expect them to join the war-room call, or if the should wait patiently for a page.</p>
-
 <p><strong>Schedule Wisely</strong> Look at all the aspects of scheduling a maintenance window.  Consider staff availability and vacations, holidays, customer demands, time zones, and yes, please consider the weather too. It will be impossible to satisfy all of those domains at 100%, but if the window you select pisses off your engineers, you should probably add an extra day to the window because nobody will be at their best performance.</p>
-
 <p><strong>Staff Redundancy</strong> It&rsquo;s not every day that I say an Agile team needs comprehensive documentation, but let&rsquo;s face it.  We need more documentation around who owns what.  We&rsquo;re pretty clear that the primary owners of this upgrade will be on the call.  Without them, there is no call. You can&rsquo;t plan for all the disasters that might occur, but you can make sure you have primary, secondary, and even tertiary ownerships defined. Bring the secondaries into the rehearsal calls and make sure they feel confident standing in-place of their primary.  The secondary engineers should have written the playbook, or at least been able to.</p>
-
 <p><strong>Define your tools and your backup tools.</strong> What tools will you use during the upgrade?  Does <em>EVERYBODY</em> know what these tools are, and have credentials to them?  How will you page people late in the night?  What video conference system is the war-room using?  Where do we keep passwords? Keep a single document of tools used and make sure every tool has a backup.  Communicate changes to that document in a multi-modal format.  Something will fail you at the worst possible time, if people didn&rsquo;t get the information they need, your upgrade will be what fails.</p>
-
 <p><strong>Who is in charge?</strong> In theater, you either report to the technical director or report to the stage manager. It&rsquo;s pretty much a decision of &ldquo;is it on stage&rdquo; or &ldquo;off stage.&rdquo; You always know who to ask, and nobody else is authorized to make show altering decisions. If one of those two decision makers are out, the other person could take over both positions in a pinch.  Who owns your migration? Who is responsible for calling for a roll-back?  Who calls in the secondaries?  Who steps in if the director gets sick? Who keeps the maintenance window scope in-check? Have these discussions, and write down the answers &hellip; and that&rsquo;s the best way to ensure you&rsquo;ll probably never need to use this knowledge. Murphy&rsquo;s Law hates a good plan.</p>
-
-<h2 id="what-s-next">What&rsquo;s Next</h2>
-
+<h2 id="whats-next">What&rsquo;s Next</h2>
 <p>We&rsquo;re still watching the system to make sure it settles into place nicely.  All systems look green so far.  Once we reach the end of this sprint, we&rsquo;ll retro as a team to discuss where we can do better next time. Let me reiterate, my company is amazing, and these things never go unheard. I am confident next time around will be even better.</p>
-
 <p>It was a long weekend, and if you&rsquo;re up for <a href="https://ko-fi.com/agilesyndrome">buying me a coffee</a>, I&rsquo;d be forever grateful.</p>
-
 <p>What&rsquo;s the most unexpected thing that&rsquo;s happened on your war-room calls?</p>
 
   </main>
@@ -303,9 +265,6 @@ It could have been much worse for us.</p>
   
     2019
   
-  <script>
-  jQuery.post("https://api.agilesyndro.me/webhook/agilesyndrome/analytics/coresite/no-response", {"path": "What happened during the maintenance window..."});
-  </script>
 </footer>
 
         </div>

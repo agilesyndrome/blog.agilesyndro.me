@@ -11,6 +11,6 @@ build:
 	hugo
 
 serve:
-	hugo server -D -b http://blawg.agilesyndro.me:1313 -v --disableFastRender
+	hugo server -D -v --disableFastRender
 
 PHONY: clean, build, serve, update
