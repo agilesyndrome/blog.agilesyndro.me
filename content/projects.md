@@ -4,10 +4,8 @@ title: "Projects"
 
 ### Open Source Contributions
 
-* [Hygieia/Cloud-Aws-Collector](https://github.com/Hygieia/hygieia-cloud-aws-collector/pull/7)
-
-### Web Services
-[Peg. A place to hang your (web)hooks](https://agilesyndro.me/support/peg)
+*  [Hygieia/Cloud-Aws-Collector](https://github.com/Hygieia/hygieia-cloud-aws-collector/pull/7)
+*  [meltwater/AWSudo](https://github.com/meltwater/awsudo/pull/39)
 
 ### Command Line Tools
 
@@ -22,9 +20,21 @@ title: "Projects"
 ### Cloud Solutions
 
 * Amazon Web Services
+    * Cost Control & Optimzations
+    * Reporting & Auditing
+    * Compute
+    * RDS & Databases
+* Docker & Kubernetes
 * Heroku
 * Azure
+  * Azure Active Directory
 * OpenStack
+
+### CI Systems
+  * Jenkins
+  * CircleCI
+  * GitHub Actions
+  * AWS Code{Commit|Pipeline|Build}*
 
 ### Third Party Integrations
 

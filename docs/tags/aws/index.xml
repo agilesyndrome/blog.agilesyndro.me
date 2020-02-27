@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AWS on AgileSyndro.me</title>
@@ -17,8 +17,7 @@
       <pubDate>Mon, 11 Nov 2019 00:00:00 -0500</pubDate>
       
       <guid>https://agilesyndro.me/blog/which-ebs-storage/</guid>
-      <description>Figuring out which EBS storage type to chooose can be a dautning task. Try out AgileSyndrome&amp;rsquo;s EBS Storage Solution test for a suggestion on what might work best for your next project! I would be glad to discuss your next storage needs in more detail too.
- </description>
+      <description>Figuring out which EBS storage type to chooose can be a dautning task. Try out AgileSyndrome&amp;rsquo;s EBS Storage Solution test for a suggestion on what might work best for your next project! I would be glad to discuss your next storage needs in more detail too.</description>
     </item>
     
     <item>

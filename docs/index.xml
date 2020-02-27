@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AgileSyndro.me</title>
@@ -16,8 +16,7 @@
       <pubDate>Mon, 11 Nov 2019 00:00:00 -0500</pubDate>
       
       <guid>https://agilesyndro.me/blog/which-ebs-storage/</guid>
-      <description>Figuring out which EBS storage type to chooose can be a dautning task. Try out AgileSyndrome&amp;rsquo;s EBS Storage Solution test for a suggestion on what might work best for your next project! I would be glad to discuss your next storage needs in more detail too.
- </description>
+      <description>Figuring out which EBS storage type to chooose can be a dautning task. Try out AgileSyndrome&amp;rsquo;s EBS Storage Solution test for a suggestion on what might work best for your next project! I would be glad to discuss your next storage needs in more detail too.</description>
     </item>
     
     <item>
@@ -65,7 +64,7 @@ Within a few days there were segments of code everywhere to create an EC2 instan
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://agilesyndro.me/www/</guid>
-      <description> window.location.replace(&#34;https://agilesyndro.me&#34;);  </description>
+      <description></description>
     </item>
     
     <item>
@@ -92,9 +91,8 @@ Within a few days there were segments of code everywhere to create an EC2 instan
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://agilesyndro.me/projects/</guid>
-      <description> Open Source Contributions  Hygieia/Cloud-Aws-Collector  Web Services Peg. A place to hang your (web)hooks
-Command Line Tools TOTP
- Generate MultiFactor auth codes on the command line. Great for automatically testing websites that require multi-factor authentication) My first Golang project! (Could use some code-review and style help)   Cloud Solutions  Amazon Web Services Heroku Azure OpenStack  Third Party Integrations  Twilio SMS Electronic Health Records (including FHIR)  </description>
+      <description>Open Source Contributions  Hygieia/Cloud-Aws-Collector meltwater/AWSudo  Command Line Tools TOTP
+ Generate MultiFactor auth codes on the command line. Great for automatically testing websites that require multi-factor authentication) My first Golang project! (Could use some code-review and style help)  Cloud Solutions  Amazon Web Services  Cost Control &amp;amp; Optimzations Reporting &amp;amp; Auditing Compute RDS &amp;amp; Databases   Docker &amp;amp; Kubernetes Heroku Azure  Azure Active Directory   OpenStack  CI Systems  Jenkins CircleCI GitHub Actions AWS Code{Commit|Pipeline|Build}*  Third Party Integrations  Twilio SMS Electronic Health Records (including FHIR)  </description>
     </item>
     
     <item>
