@@ -26,7 +26,7 @@ If you can terminate one of your load-balanced EC2 instances, and have some auto
 
 If you're okay with the Cold Strategy, you're chasing the wrong thing. I typically reject client proposals using this strategy and encourage clients to look at strengthening their existing single region strategy. Many places need to be looked at such as placement groups (did AWS place your servers on the same physical data rack?) and looking for other "single AZ" services that might be important to your overall strategy. 
 
-If you're chasing the active strategy, my next question is about your containerization strategy.  *Are you using Kubernetes or Docker?  If not, let's get there first.* It's much easier to implement these kinds of strategies when we have containers we can re-deploy and have underlying container hosts that communicate on their own backplane. 
+If you're chasing the active strategy, my next question is about your containerization strategy.  *Are you using Kubernetes or Docker?  If not, let's get there first.* It's much easier to implement these kinds of strategies when we have containers we can re-deploy and have underlying container hosts that communicate on their own network. 
 
 **Don't over-engineer.**
 
