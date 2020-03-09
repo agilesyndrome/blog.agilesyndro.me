@@ -4,12 +4,32 @@
   
   <url>
     <loc>https://agilesyndro.me/tags/aws/</loc>
-    <lastmod>2019-11-11T19:56:22-05:00</lastmod>
+    <lastmod>2020-03-09T07:57:35-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://agilesyndro.me/blog/</loc>
-    <lastmod>2019-11-11T19:56:22-05:00</lastmod>
+    <lastmod>2020-03-09T07:57:35-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agilesyndro.me/blog/multi-region-or-multi-zone/</loc>
+    <lastmod>2020-03-09T07:57:35-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agilesyndro.me/tags/failover/</loc>
+    <lastmod>2020-03-09T07:57:35-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agilesyndro.me/tags/high-availability/</loc>
+    <lastmod>2020-03-09T07:57:35-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agilesyndro.me/tags/</loc>
+    <lastmod>2020-03-09T07:57:35-04:00</lastmod>
   </url>
   
   <url>
@@ -19,11 +39,6 @@
   
   <url>
     <loc>https://agilesyndro.me/tags/storage/</loc>
-    <lastmod>2019-11-11T19:56:22-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://agilesyndro.me/tags/</loc>
     <lastmod>2019-11-11T19:56:22-05:00</lastmod>
   </url>
   

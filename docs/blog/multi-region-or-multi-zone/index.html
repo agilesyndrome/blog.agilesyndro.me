@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.65.3" />
-  <link rel="canonical" href="https://agilesyndro.me/tags/">
+  <link rel="canonical" href="https://agilesyndro.me/blog/multi-region-or-multi-zone/">
 
   
 
@@ -32,7 +32,7 @@
 
   
   
-  <title>Tags | AgileSyndro.me</title>
+  <title>Do you really need redundancy in us-west-1? | AgileSyndro.me</title>
 </head>
 
   <body>
@@ -223,120 +223,27 @@
         <div>
           
   <main id="main">
-    <h1>Tags</h1>
-    <ul class="patterns-list">
-      
-        <li>
-          <h2>
-            <a href="/tags/ansible/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (1) Ansible
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/aws/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (3) AWS
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/communication/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (1) Communication
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/cost-control/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (1) Cost Control
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/ebs/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (1) EBS
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/failover/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (1) Failover
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/high-availability/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (1) High Availability
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/love/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (1) Love
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/storage/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (1) Storage
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/terraform/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (2) Terraform
-            </a>
-          </h2>
-        </li>
-      
-    </ul>
+    <h1>Do you really need redundancy in us-west-1?</h1>
+    <p>I see this type of request in my office pretty often.  A customer calls or writes in with a proposal that looks almost like this: &ldquo;I have my servers running in us-east-1, all behind a load balancer. Can you assist us with a failover setup in the us-west-1 region?&rdquo;</p>
+<p><strong>Yes, I most certainly can, but it probably isn&rsquo;t what you want.</strong></p>
+<p>You run multiple EC2 instances, behind a load balancer or two.  Your health checks are set up properly.  Your RDS instance is set to be &ldquo;Multi-AZ&rdquo;. Chances are, you&rsquo;re already running a highly available and fault-tolerant system that can recover quickly.</p>
+<p>Let&rsquo;s dig into the details, and find out if multi-region failover strategies are what you want.  To begin, we need to understand the difference between the terms &ldquo;High Availability&rdquo; or HA, and &ldquo;Fault Tolerance&rdquo;. Your customers likely won&rsquo;t understand the difference when you create quotes, but in practice, there are large between what is expected between these two types of systems. Simply put, * customers should not notice the application performing badly in a fault-tolerant system*.  With high availability, customers may notice the underlying fault for a &ldquo;moment&rdquo; in time while the system heals itself, but it recovers without further customer interaction. Asking the customer to try something again is not HA!</p>
+<p><strong>You probably have a fault-tolerant system already.</strong></p>
+<p>If you can terminate one of your load-balanced EC2 instances, and have some auto-scaling groups recover it, you&rsquo;re well on the path to checking the fault-tolerant box. Did the auto-scaling group notice it was missing and re-create it?  Did the application continue running without errors? If you said yes to both of those, you should send some kudos to your team for making a fault-tolerant system.</p>
+<p><em>An AWS Region is made up of multiple physical data centers.</em> If your servers are already spread between multiple availability zones, you&rsquo;ve got some isolation from total catastrophic failure! We can envision some reasons why all of us-east-1 would collapse, but if any of those scenarios play out, the earth likely has other issues to deal with beyond application failure. If you&rsquo;re 100% sure you still want multi-region strategies, the are two strategies to achieve this:</p>
+<ul>
+<li>
+<p>Cold Strategy: Resources are provisioned, but remain cold with no traffic. In the event of a failover event, they become the active cluster</p>
+</li>
+<li>
+<p>Active Strategy: Resources are online at all times, and likely serve production traffic equally with other regions.</p>
+</li>
+</ul>
+<p>If you&rsquo;re okay with the Cold Strategy, you&rsquo;re chasing the wrong thing. I typically reject client proposals using this strategy and encourage clients to look at strengthening their existing single region strategy. Many places need to be looked at such as placement groups (did AWS place your servers on the same physical data rack?) and looking for other &ldquo;single AZ&rdquo; services that might be important to your overall strategy.</p>
+<p>If you&rsquo;re chasing the active strategy, my next question is about your containerization strategy.  <em>Are you using Kubernetes or Docker?  If not, let&rsquo;s get there first.</em> It&rsquo;s much easier to implement these kinds of strategies when we have containers we can re-deploy and have underlying container hosts that communicate on their own backplane.</p>
+<p><strong>Don&rsquo;t over-engineer.</strong></p>
+<p>I encourage you to not undertake a multi-region AWS strategy until you&rsquo;re ready for it.</p>
+
   </main>
 
           <footer role="contentinfo">
