@@ -6,10 +6,21 @@
     <description>Recent content in AWS on AgileSyndro.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 07:57:35 -0400</lastBuildDate>
     
 	<atom:link href="https://agilesyndro.me/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Do you really need redundancy in us-west-1?</title>
+      <link>https://agilesyndro.me/blog/multi-region-or-multi-zone/</link>
+      <pubDate>Mon, 09 Mar 2020 07:57:35 -0400</pubDate>
+      
+      <guid>https://agilesyndro.me/blog/multi-region-or-multi-zone/</guid>
+      <description>I see this type of request in my office pretty often. A customer calls or writes in with a proposal that looks almost like this: &amp;ldquo;I have my servers running in us-east-1, all behind a load balancer. Can you assist us with a failover setup in the us-west-1 region?&amp;rdquo;
+Yes, I most certainly can, but it probably isn&amp;rsquo;t what you want.
+You run multiple EC2 instances, behind a load balancer or two.</description>
+    </item>
     
     <item>
       <title>Which EBS storage solution do I need?</title>
