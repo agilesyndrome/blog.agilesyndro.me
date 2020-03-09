@@ -12,7 +12,7 @@ I see this type of request in my office pretty often.  A customer calls or write
 
 You run multiple EC2 instances, behind a load balancer or two.  Your health checks are set up properly.  Your RDS instance is set to be "Multi-AZ". Chances are, you're already running a highly available and fault-tolerant system that can recover quickly. 
 
-Let's dig into the details, and find out if multi-region failover strategies are what you want.  To begin, we need to understand the difference between the terms "High Availability" or HA, and "Fault Tolerance". Your customers likely won't understand the difference when you create quotes, but in practice, there are large between what is expected between these two types of systems. Simply put, * customers should not notice the application performing badly in a fault-tolerant system*.  With high availability, customers may notice the underlying fault for a "moment" in time while the system heals itself, but it recovers without further customer interaction. Asking the customer to try something again is not HA! 
+Let's dig into the details, and find out if multi-region failover strategies are what you want.  To begin, we need to understand the difference between the terms "High Availability" or HA, and "Fault Tolerance". Your customers likely won't understand the difference when you create quotes, but in practice, there are large differences between what is expected between these two types of systems. Simply put, * customers should not notice the application performing badly in a fault-tolerant system*.  With high availability, customers may notice the underlying fault for a "moment" in time while the system heals itself, but it recovers without further customer interaction. Asking the customer to try something again is not HA! 
 
 **You probably have a fault-tolerant system already.**
 
@@ -26,7 +26,7 @@ If you can terminate one of your load-balanced EC2 instances, and have some auto
 
 If you're okay with the Cold Strategy, you're chasing the wrong thing. I typically reject client proposals using this strategy and encourage clients to look at strengthening their existing single region strategy. Many places need to be looked at such as placement groups (did AWS place your servers on the same physical data rack?) and looking for other "single AZ" services that might be important to your overall strategy. 
 
-If you're chasing the active strategy, my next question is about your containerization strategy.  *Are you using Kubernetes or Docker?  If not, let's get there first.* It's much easier to implement these kinds of strategies when we have containers we can re-deploy and have underlying container hosts that communicate on their own backplane. 
+If you're chasing the active strategy, my next question is about your containerization strategy.  *Are you using Kubernetes or Docker?  If not, let's get there first.* It's much easier to implement these kinds of strategies when we have containers we can re-deploy and have underlying container hosts that communicate on their own network. 
 
 **Don't over-engineer.**
 
