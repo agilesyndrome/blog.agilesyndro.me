@@ -20,6 +20,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
+
   <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}" media="none" onload="this.media='all';">
 
   {{ $templateStyles := resources.Get "css/template-styles.css" }}
@@ -37,4 +38,7 @@
     {{ $title = .Site.Title }}
   {{ end }}
   <title>{{ $title }}</title>
+
+
 </head>
+
