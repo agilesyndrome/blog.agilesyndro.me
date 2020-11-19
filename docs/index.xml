@@ -11,6 +11,19 @@
     
     
     <item>
+      <title>What is your container strategy?</title>
+      <link>https://agilesyndro.me/blog/container-strategies/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://agilesyndro.me/blog/container-strategies/</guid>
+      <description>Do any of these statements cause you anxiety?  The queue is backed up with work, can you add more servers?
+  One or more of your Amazon EC2 instances are scheduled for maintenance.
+  Alert: production-api-3 is at 90% disk space.
+  We need to upgrade the version of Ruby on the production system.
+  Can I borrow the staging environment for a few days?</description>
+    </item>
+    
+    <item>
       <title>Do you really need redundancy in us-west-1?</title>
       <link>https://agilesyndro.me/blog/multi-region-or-multi-zone/</link>
       <pubDate>Mon, 09 Mar 2020 07:57:35 -0400</pubDate>
@@ -102,7 +115,7 @@ Within a few days there were segments of code everywhere to create an EC2 instan
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://agilesyndro.me/projects/</guid>
-      <description>Open Source Contributions  Hygieia/Cloud-Aws-Collector meltwater/AWSudo  Command Line Tools TOTP
+      <description>Open Source Contributions  Hygieia/Cloud-Aws-Collector AWSudo Mailtrap  Command Line Tools TOTP
  Generate MultiFactor auth codes on the command line. Great for automatically testing websites that require multi-factor authentication) My first Golang project! (Could use some code-review and style help)  Cloud Solutions  Amazon Web Services  Cost Control &amp;amp; Optimzations Reporting &amp;amp; Auditing Compute RDS &amp;amp; Databases   Docker &amp;amp; Kubernetes Heroku Azure  Azure Active Directory   OpenStack  CI Systems  Jenkins CircleCI GitHub Actions AWS Code{Commit|Pipeline|Build}*  Third Party Integrations  Twilio SMS Electronic Health Records (including FHIR)  </description>
     </item>
     

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.65.3" />
-  <link rel="canonical" href="https://agilesyndro.me/blog/1998-is-calling/">
+  <link rel="canonical" href="https://agilesyndro.me/blog/container/">
 
   
 
@@ -33,7 +33,7 @@
 
   
   
-  <title>1998 is calling, and it wants a website | AgileSyndro.me</title>
+  <title>Containers | AgileSyndro.me</title>
 
 
 </head>
@@ -227,76 +227,106 @@
         <div>
           
   <main id="main">
-    <h1>1998 is calling, and it wants a website</h1>
-    <p>It&rsquo;s 1998 and the local robotics club wants a website.  You&rsquo;ve got this, you know HTML, some simple JavaScript and how to use Windows Paint to re-size images. The website design isn&rsquo;t the problem, it never really is.  Now comes the hard part, let&rsquo;s get our web server up and running:</p>
+    <h1>Containers</h1>
+    <h1 id="do-any-of-these-statements-cause-you-anxiety">Do any of these statements cause you anxiety?</h1>
+<blockquote>
+<p>The queue is backed up with work, can you add more servers?</p>
+</blockquote>
+<blockquote>
+<p>One or more of your Amazon EC2 instances are scheduled for maintenance.</p>
+</blockquote>
+<blockquote>
+<p>Alert: production-api-3 is at 90% disk space.</p>
+</blockquote>
+<blockquote>
+<p>We need to upgrade the version of Ruby on the production system.</p>
+</blockquote>
+<blockquote>
+<p>Can I borrow the staging environment for a few days?</p>
+</blockquote>
+<blockquote>
+<p>We need to rollback the latest code deployment.</p>
+</blockquote>
+<p>Anxiety around these statements usually indicates that your &ldquo;container&rdquo; strategy needs to be addressed, and I&rsquo;m not just talking about your migration to Kubernetes or Docker.  In the technical sense of a word, a container is: &ldquo;an object that can be used to hold or transport something.&rdquo;  From a DevOps perspective, we&rsquo;re going to look at the four layers of containerization:</p>
+<ol>
+<li>Code Artifacts</li>
+<li>Server Images</li>
+<li>Infrastructure as Code</li>
+<li>Configuration Management</li>
+</ol>
+<h2 id="no-containerization-strategy">No Containerization Strategy</h2>
+<p>When things go wrong, you&rsquo;re in trouble. Turning on a new server, or recreating an old server is a daunting task. A mid-deployment failure can be catastrophic to you. Documentation is updated manually and is likely out of date. Not many people understand the deployment strategy.</p>
+<p>If you answer yes to <strong>any</strong> of these questions, you need to address your strategy immediately:</p>
 <ul>
-<li>Red Hat 5.2</li>
-<li>Apache v1.3</li>
-<li>DNS A Record</li>
-<li>FTP Server for transfering the files</li>
+<li>Our deployment process includes commands like <code>scp</code> or <code>rsync</code> to move files onto the server</li>
+<li>We transfer files directly to our server using applications like <code>FileZilla</code>.</li>
+<li>We don&rsquo;t use a version control system (Git, TFS, etc.)</li>
+<li>We don&rsquo;t have a CI system that builds our code</li>
 </ul>
-<p>But let&rsquo;s not forget what you had to tell the team:</p>
+<hr>
+<h2 id="code-artifacts">Code Artifacts</h2>
+<p>Does this sound like your workflow?</p>
 <ul>
-<li><strong>It&rsquo;s slow:</strong> Your images have to be small because your server isn&rsquo;t very powerful, but traffic should be light so performance shouldn&rsquo;t be an issue yet.</li>
-<li><strong>It&rsquo;s unreliable:</strong> The server might reboot for some patches, and your website will be down for a few minutes, but you&rsquo;ll try to make that happen at night or weekends. Honestly, you just might reboot the server because you fucked up something else and a reboot is the only way to fix it.</li>
-<li><strong>Your IP address changes:</strong> The website might go down if your Home IP address changes.  The team isn&rsquo;t paying you anything, and you don&rsquo;t want to pay big money to host the website somewhere else.  Your dynamic DNS script should take care of any changes within a 5-10 minute period.</li>
+<li>You have a build system that generates a .zip file (or tarball) of your code changes (Jenkins, CircleCI, AWS CodeBuild)</li>
+<li>You have a <code>./build.sh</code> script in your repo that generates an artifact manually</li>
+<li>You deploy code by using <code>cap</code>istrano, or some other form of git deployment workflow</li>
+<li>Updating code on the server is a simple <code>git checkout</code> or <code>git pull</code> command</li>
+<li>You can describe the steps to deploy new code changes in three sentences or less</li>
 </ul>
-<h2 id="a-better-way">A better way</h2>
-<p>There has to be a better way, right? It&rsquo;s 2006 and along comes Amazon Web Services to save the day.  By 2008 GitHub is here too.  Let&rsquo;s look at a modern stack for a team website:</p>
+<p>Congratulations! You&rsquo;ve reached the first level of containerization! A code container, or more commonly called an artifact, can be any packaged or compressed file that contains your complete code base.</p>
+<p>It can be a complex installation script, like a <code>.msi</code> file, or it can simply be a <code>.zip</code> or <code>.tar.gz</code> file of your git repo.  In these scenarios, we can define your &ldquo;container&rdquo; as the code artifact generated, for instance,<code>build-85.tar.gz</code>.  When you need to update new code or rollback old code, you can simply select a new artifact and begin the deployment process.  The artifact could be a compressed tar/zip file, or it could be a git commit.  Either way, you&rsquo;ve earned your first DevOps container badge. As long as you have a copy of your code, <strong>with a version number in your filename</strong>, you&rsquo;re in good shape.</p>
+<p>In an ideal world, these files should be generated by some form of continuous integration systems like CircleCI or Jenkins. It&rsquo;s not strictly necessary. I can create a versioned copy of a .zip file faster than you can set up Jenkins:</p>
+<pre><code>aws s3 cp build.tar.gz s3://my-artifact-bucket/project/build-$(date +%Y-%m-%d-%H%M).tar.gz
+</code></pre><hr>
+<h2 id="server-images-ami-vmd-iso">Server Images (AMI, VMD, ISO)</h2>
+<p>Can you re-create an AWS EC2 image by deploying a custom image? Do you have a template that has all of the necessary dependencies to run your application?  Does it come pre-installed with your preferred versions of NodeJS, Ruby, Java, and/or Python? If so, you&rsquo;re well all your way to server images.</p>
+<p><strong>Caveat</strong>: This only counts if your server images are defined in code, and created using a build tool  (<code>Ansible</code>, <code>Packer</code>, <code>Puppet</code>, <code>Chef</code>, etc.) If you&rsquo;ve simply taken a &ldquo;snapshot copy&rdquo; of an existing server, and use that as your image, you haven&rsquo;t really unlocked the &ldquo;Server Image&rdquo; achievement yet.</p>
+<p>You&rsquo;ll identify with this containerization strategy if:</p>
 <ul>
-<li>Static files in GitHub</li>
-<li>Amazon S3 Bucket for public hosting</li>
-<li>Route 53 Domain Name</li>
-<li>CloudFront for Speed and Security (We&rsquo;ve got HTTPS! Imagine doing that in 1998.)</li>
-<li>Perhaps even some Terraform to automate all the things.</li>
+<li>All of your server dependencies like Ruby, NodeJS, or Nginx are defined in JSON, Yaml, or other scripting files</li>
+<li>You have &ldquo;base images&rdquo; that you apply additional changes to</li>
+<li>New employees add their SSH Key to a code repo, which is applied to all servers</li>
 </ul>
-<p>Everybody wants a website.  Your friend owns a medical practice, your son&rsquo;s soccer team needs one, your neighbor&rsquo;s soap making business is booming.  You&rsquo;ve got websites you manage, which isn&rsquo;t a problem, but suddenly your Amazon Web Services bill is $15+/month for websites you don&rsquo;t make any money on.  It&rsquo;s only a little bit of money, but that&rsquo;s okay. You don&rsquo;t mind.</p>
-<h2 id="-but-does-your-wife-know-how-much-you-spend-at-aws">&hellip; but does your wife know how much you spend at AWS?</h2>
-<p>It&rsquo;s not the storage costs at AWS that burn you, it&rsquo;s the add-on services. Here&rsquo;s my recent AWS bill for a few simple websites:</p>
-<table>
-<thead>
-<tr>
-<th align="left">AWS Service</th>
-<th align="left">Monthly Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><strong>S3 Storage</strong></td>
-<td align="left">$0.85/month</td>
-</tr>
-<tr>
-<td align="left"><strong>Route 53 DNS</strong></td>
-<td align="left">$8.06/month</td>
-</tr>
-<tr>
-<td align="left"><strong>CloudWatch</strong></td>
-<td align="left">$1.90/month</td>
-</tr>
-<tr>
-<td align="left"><strong>CloudFront</strong></td>
-<td align="left">$0.01/month</td>
-</tr>
-<tr>
-<td align="left"><strong>HTTPS Certificates</strong></td>
-<td align="left">$6.00/month</td>
-</tr>
-</tbody>
-</table>
-<p>We&rsquo;re now at $16.82/month US Dollars for a few basic websites. In other words, thats $201.84 a year that could have been in my pocket. Ironically, the $1.90 I pay at CloudWatch is primrarily alarms to monitor that I haven&rsquo;t spent more at AWS than I want to.  Yes, they charge me to make sure I&rsquo;m not spending too much.</p>
-<h2 id="the-alternatives">The Alternatives</h2>
-<p>There are some alternatives that I&rsquo;ve found that work for me. Your mileage my very:</p>
-<p><strong>GitHub Pages</strong> FREE Plan.  If you can manage to make this work, I suggest you do it.  It&rsquo;s free, and GitHub will host your page.  If you can&rsquo;t, you might need to continue eating the $0.85/month in storage costs, but it really isn&rsquo;t that bad. You don&rsquo;t need a private repo for your public website.  You&rsquo;ve got nothing on that site that people can&rsquo;t scrape from the public internet anyway.</p>
-<p><strong>CloudFlare</strong> FREE Plan.  This solves a multitude of issues.  Although I still register my domains at AWS Route 53 Domains, I now point the name servers over the CloudFlare to manage my DNS.  This saves me $0.50/month/domain as the CloudFlare DNS system is free.  It also doubles as my Logging &amp; Metrics system, the Global CDN for speed, and HTTPS Certificates&hellip; all of which are given away in their free plan.</p>
-<p>I&rsquo;d like to say I&rsquo;m bank rolling my $15/mo again, but I haven&rsquo;t finished moving the websites over yet.  I&rsquo;ll let you know what my next bill looks like once that&rsquo;s done.</p>
-<h2 id="shameless-plugs">Shameless Plugs</h2>
+<p>When it comes time to upgrade to a new version of Ruby, you&rsquo;re not afraid.  You can branch your existing code repository, update the Ruby version, and spin up a test server in record time.  You might still be deploying your code onto this system manually, but when you&rsquo;re happy with the changes your new &ldquo;blessed&rdquo; server image is up to date and ready to go.</p>
+<hr>
+<h2 id="infrastructure-as-code">Infrastructure as Code</h2>
+<p>You use Terraform or CloudFormation, and your team is proud of it.  Your team complains that the infrastructure code isn&rsquo;t DRY, or argues over the use of <a href="https://agilesyndro.me/blog/terraform-modules-suck/">Terraform Modules</a>.</p>
+<p>Congratulations, when you need a new load balancer you can write out a definition in a code file, merge the branch, and your load balancer comes online, perfectly configured with the right TLS certificates. AWS Security Groups are managed in code, ingress IP addresses are listed with code comments about why they exist.</p>
+<p>You&rsquo;ve probably also felt the pain of your automation system deleting a crucial production system that you needed (but it thought you didn&rsquo;t want anymore.)</p>
+<p>A word of caution, if you haven&rsquo;t achieved either Code or OS containerization, you&rsquo;re chasing the wrong problem. Ask your team:</p>
 <ul>
-<li>Like what you read today? Want to help me recover some of my AWS costs I lost? I&rsquo;m coffee driven. <a href="https://ko-fi.com/agilesyndrome">Buy me a coffee</a></li>
-<li>Shout out to the old robotics team, still kicking it! <a href="https://www.thebluealliance.com/team/179">Children of the Swamp #179</a></li>
-<li>Sticking with S3 and CloudFront, that&rsquo;s cool, but you&rsquo;ll want something like <a href="https://www.s3stat.com">S3Stat</a> to watch your log files.  I bet you didn&rsquo;t know your S3 logs had this much data in it. S3Stat made analytics easy.</li>
+<li>When was the last time a load balancer&rsquo;s configuration was changed by mistake?</li>
+<li>How much time do you spend managing DNS records, compared to how much time you spend launching new servers?</li>
 </ul>
-<h2 id="your-thoughts">Your thoughts?</h2>
-<p>What are your thoughts on alternatives to AWS?  Please leave me a comment and let me know what you use!</p>
+<p>In a healthy company, you&rsquo;ll find much more return on investment in code artifacts and server images than you will in infrastructure as code. That&rsquo;s not to say that this section isn&rsquo;t important, it&rsquo;s just not as important as the others.</p>
+<hr>
+<h2 id="configuration">Configuration</h2>
+<p>Where do you store your configuration files? Do they exist anywhere other than the server? Are you confident they are up to date? (Seriously, have you checked the delta between what&rsquo;s on the server and what the config file is?)</p>
+<p>A health configuration management system will let you quickly move secrets out of your codebase and into encrypted storage.  It will also let you set multiple configuration settings for each dev/test/qa/production environment you have.  Developers should know what this system is, and fully understand the process to add/update values within it.</p>
+<ul>
+<li>Is it easy for you to roll new API Tokens or Database credentials?</li>
+<li>Do you have hard-coded security tokens in your codebase?</li>
+<li>Where do you store your configuration settings?</li>
+<li>How do you switch configuration settings between environments?</li>
+</ul>
+<p>If you are already using a configuration management tool, go double-check your configuration files to make sure they haven&rsquo;t diverged.  You might be surprised.</p>
+<hr>
+<h1 id="team-health-check">Team Health Check</h1>
+<p>Ask your team to answer these simple questions:</p>
+<ul>
+<li>Is our code stored in a version management system?</li>
+<li>Do we generate code artifact files that are versioned?</li>
+<li>Is our code automatically built and versioned when we commit new code?</li>
+<li>Do we track server dependencies like required apt packages in code anywhere?</li>
+<li>Is anything on our servers configured manually?</li>
+<li>Are our operating system images built automatically?</li>
+<li>Are we managing our infrastructure as code?</li>
+<li>Do we have a configuration management system in place?</li>
+<li>Does our configuration management system support local development, QA environments, as well as production settings?</li>
+<li>Do we store any secrets in our codebase?</li>
+<li>Are we storing secrets directly on servers?</li>
+</ul>
+<p>You&rsquo;ll want to start at the first &ldquo;no&rdquo; answer.  Want some help? I&rsquo;m available for consulting projects. <a href="https://agilesyndro.me/contact">Contact Me</a>.</p>
 
   </main>
 
@@ -308,7 +338,7 @@
     </label>
   </div>
   
-    AgileSyndrome
+    2019
   
 </footer>
 
