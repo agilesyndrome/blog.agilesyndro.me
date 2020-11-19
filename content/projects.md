@@ -5,7 +5,8 @@ title: "Projects"
 ### Open Source Contributions
 
 *  [Hygieia/Cloud-Aws-Collector](https://github.com/Hygieia/hygieia-cloud-aws-collector/pull/7)
-*  [meltwater/AWSudo](https://github.com/meltwater/awsudo/pull/39)
+*  [AWSudo](https://github.com/meltwater/awsudo/pull/39)
+* [Mailtrap](https://github.com/eaudeweb/edw.docker.mailtrap/pull/11)
 
 ### Command Line Tools
 

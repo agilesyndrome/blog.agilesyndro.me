@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.65.3" />
-  <link rel="canonical" href="https://agilesyndro.me/blog/1998-is-calling/">
+  <link rel="canonical" href="https://agilesyndro.me/tags/ec2/">
 
   
 
@@ -33,7 +33,7 @@
 
   
   
-  <title>1998 is calling, and it wants a website | AgileSyndro.me</title>
+  <title>EC2 | AgileSyndro.me</title>
 
 
 </head>
@@ -227,77 +227,21 @@
         <div>
           
   <main id="main">
-    <h1>1998 is calling, and it wants a website</h1>
-    <p>It&rsquo;s 1998 and the local robotics club wants a website.  You&rsquo;ve got this, you know HTML, some simple JavaScript and how to use Windows Paint to re-size images. The website design isn&rsquo;t the problem, it never really is.  Now comes the hard part, let&rsquo;s get our web server up and running:</p>
-<ul>
-<li>Red Hat 5.2</li>
-<li>Apache v1.3</li>
-<li>DNS A Record</li>
-<li>FTP Server for transfering the files</li>
-</ul>
-<p>But let&rsquo;s not forget what you had to tell the team:</p>
-<ul>
-<li><strong>It&rsquo;s slow:</strong> Your images have to be small because your server isn&rsquo;t very powerful, but traffic should be light so performance shouldn&rsquo;t be an issue yet.</li>
-<li><strong>It&rsquo;s unreliable:</strong> The server might reboot for some patches, and your website will be down for a few minutes, but you&rsquo;ll try to make that happen at night or weekends. Honestly, you just might reboot the server because you fucked up something else and a reboot is the only way to fix it.</li>
-<li><strong>Your IP address changes:</strong> The website might go down if your Home IP address changes.  The team isn&rsquo;t paying you anything, and you don&rsquo;t want to pay big money to host the website somewhere else.  Your dynamic DNS script should take care of any changes within a 5-10 minute period.</li>
-</ul>
-<h2 id="a-better-way">A better way</h2>
-<p>There has to be a better way, right? It&rsquo;s 2006 and along comes Amazon Web Services to save the day.  By 2008 GitHub is here too.  Let&rsquo;s look at a modern stack for a team website:</p>
-<ul>
-<li>Static files in GitHub</li>
-<li>Amazon S3 Bucket for public hosting</li>
-<li>Route 53 Domain Name</li>
-<li>CloudFront for Speed and Security (We&rsquo;ve got HTTPS! Imagine doing that in 1998.)</li>
-<li>Perhaps even some Terraform to automate all the things.</li>
-</ul>
-<p>Everybody wants a website.  Your friend owns a medical practice, your son&rsquo;s soccer team needs one, your neighbor&rsquo;s soap making business is booming.  You&rsquo;ve got websites you manage, which isn&rsquo;t a problem, but suddenly your Amazon Web Services bill is $15+/month for websites you don&rsquo;t make any money on.  It&rsquo;s only a little bit of money, but that&rsquo;s okay. You don&rsquo;t mind.</p>
-<h2 id="-but-does-your-wife-know-how-much-you-spend-at-aws">&hellip; but does your wife know how much you spend at AWS?</h2>
-<p>It&rsquo;s not the storage costs at AWS that burn you, it&rsquo;s the add-on services. Here&rsquo;s my recent AWS bill for a few simple websites:</p>
-<table>
-<thead>
-<tr>
-<th align="left">AWS Service</th>
-<th align="left">Monthly Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><strong>S3 Storage</strong></td>
-<td align="left">$0.85/month</td>
-</tr>
-<tr>
-<td align="left"><strong>Route 53 DNS</strong></td>
-<td align="left">$8.06/month</td>
-</tr>
-<tr>
-<td align="left"><strong>CloudWatch</strong></td>
-<td align="left">$1.90/month</td>
-</tr>
-<tr>
-<td align="left"><strong>CloudFront</strong></td>
-<td align="left">$0.01/month</td>
-</tr>
-<tr>
-<td align="left"><strong>HTTPS Certificates</strong></td>
-<td align="left">$6.00/month</td>
-</tr>
-</tbody>
-</table>
-<p>We&rsquo;re now at $16.82/month US Dollars for a few basic websites. In other words, thats $201.84 a year that could have been in my pocket. Ironically, the $1.90 I pay at CloudWatch is primrarily alarms to monitor that I haven&rsquo;t spent more at AWS than I want to.  Yes, they charge me to make sure I&rsquo;m not spending too much.</p>
-<h2 id="the-alternatives">The Alternatives</h2>
-<p>There are some alternatives that I&rsquo;ve found that work for me. Your mileage my very:</p>
-<p><strong>GitHub Pages</strong> FREE Plan.  If you can manage to make this work, I suggest you do it.  It&rsquo;s free, and GitHub will host your page.  If you can&rsquo;t, you might need to continue eating the $0.85/month in storage costs, but it really isn&rsquo;t that bad. You don&rsquo;t need a private repo for your public website.  You&rsquo;ve got nothing on that site that people can&rsquo;t scrape from the public internet anyway.</p>
-<p><strong>CloudFlare</strong> FREE Plan.  This solves a multitude of issues.  Although I still register my domains at AWS Route 53 Domains, I now point the name servers over the CloudFlare to manage my DNS.  This saves me $0.50/month/domain as the CloudFlare DNS system is free.  It also doubles as my Logging &amp; Metrics system, the Global CDN for speed, and HTTPS Certificates&hellip; all of which are given away in their free plan.</p>
-<p>I&rsquo;d like to say I&rsquo;m bank rolling my $15/mo again, but I haven&rsquo;t finished moving the websites over yet.  I&rsquo;ll let you know what my next bill looks like once that&rsquo;s done.</p>
-<h2 id="shameless-plugs">Shameless Plugs</h2>
-<ul>
-<li>Like what you read today? Want to help me recover some of my AWS costs I lost? I&rsquo;m coffee driven. <a href="https://ko-fi.com/agilesyndrome">Buy me a coffee</a></li>
-<li>Shout out to the old robotics team, still kicking it! <a href="https://www.thebluealliance.com/team/179">Children of the Swamp #179</a></li>
-<li>Sticking with S3 and CloudFront, that&rsquo;s cool, but you&rsquo;ll want something like <a href="https://www.s3stat.com">S3Stat</a> to watch your log files.  I bet you didn&rsquo;t know your S3 logs had this much data in it. S3Stat made analytics easy.</li>
-</ul>
-<h2 id="your-thoughts">Your thoughts?</h2>
-<p>What are your thoughts on alternatives to AWS?  Please leave me a comment and let me know what you use!</p>
-
+    <h1>EC2</h1>
+    <ul class="patterns-list">
+    
+      <li>
+        <h2>
+          <a href="https://agilesyndro.me/blog/container-strategies/">
+            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            What is your container strategy?
+          </a>
+        </h2>
+      </li>        
+    
+    </ul>
   </main>
 
           <footer role="contentinfo">
