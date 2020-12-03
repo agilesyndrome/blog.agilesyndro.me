@@ -1,3 +1,5 @@
+env:=production
+
 clean:
 	rm -rf docs
 
@@ -12,5 +14,8 @@ build:
 
 serve:
 	hugo server -D -v --disableFastRender
+
+push:
+	aws s3 cp docs s3://cdn.agilesyndro.me/agilesyndro.me/$(env) --recursive
 
 PHONY: clean, build, serve, update

@@ -29,15 +29,15 @@ disqusShortname = "agilesyndrome"
     weight = 1
   [[menu.nav]]
     name = "Blog"
-    url = "/blog"
+    url = "/blog/"
     weight = 20
   [[menu.nav]]
     name = "Projects"
-    url = "/projects"
+    url = "/projects/"
     weight = 30
   [[menu.nav]]
     name = "Contact"
-    url = "/contact"
+    url = "/contact/"
     weight = 40
   [[menu.nav]]
     name = "RSS"
