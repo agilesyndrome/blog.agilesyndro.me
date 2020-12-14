@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <main id="main">
+    <h1>
+      {{ .Title }}
+    </h1>
+    {{ .Content }}
+  </main>
+  <script src="{{ "js/stripe.js" | absURL }}"></script>
+  
+{{ end }}
