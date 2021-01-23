@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AgileSyndro.me</title>
+    <link>https://agilesyndro.me/</link>
+    <description>Recent content on AgileSyndro.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://agilesyndro.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is your container strategy?</title>
+      <link>https://agilesyndro.me/blog/container-strategies/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 -0500</pubDate>
+      
+      <guid>https://agilesyndro.me/blog/container-strategies/</guid>
+      <description>Do any of these statements cause you anxiety?  The queue is backed up with work, can you add more servers?
+  One or more of your Amazon EC2 instances are scheduled for maintenance.
+  Alert: production-api-3 is at 90% disk space.
+  We need to upgrade the version of Ruby on the production system.
+  Can I borrow the staging environment for a few days?</description>
+    </item>
+    
+    <item>
+      <title>Do you really need redundancy in us-west-1?</title>
+      <link>https://agilesyndro.me/blog/multi-region-or-multi-zone/</link>
+      <pubDate>Mon, 09 Mar 2020 07:57:35 -0400</pubDate>
+      
+      <guid>https://agilesyndro.me/blog/multi-region-or-multi-zone/</guid>
+      <description>I see this type of request in my office pretty often. A customer calls or writes in with a proposal that looks almost like this: &amp;ldquo;I have my servers running in us-east-1, all behind a load balancer. Can you assist us with a failover setup in the us-west-1 region?&amp;rdquo;
+Yes, I most certainly can, but it probably isn&amp;rsquo;t what you want.
+You run multiple EC2 instances, behind a load balancer or two.</description>
+    </item>
+    
+    <item>
+      <title>Which EBS storage solution do I need?</title>
+      <link>https://agilesyndro.me/blog/which-ebs-storage/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://agilesyndro.me/blog/which-ebs-storage/</guid>
+      <description>Figuring out which EBS storage type to chooose can be a dautning task. Try out AgileSyndrome&amp;rsquo;s EBS Storage Solution test for a suggestion on what might work best for your next project! I would be glad to discuss your next storage needs in more detail too.</description>
+    </item>
+    
+    <item>
+      <title>13 Years later, and &#39;How was your day?&#39; still terrifies both of us.</title>
+      <link>https://agilesyndro.me/blog/how-was-your-day/</link>
+      <pubDate>Tue, 18 Jun 2019 06:00:00 -0400</pubDate>
+      
+      <guid>https://agilesyndro.me/blog/how-was-your-day/</guid>
+      <description>13 Years Today is my 13th wedding anniversary. Let me start by saying my wife is amazing. Like, I could make all of you jealous by talking about how awesome she is. After 4,748 days of marriage though, the one question that still terrifies both of us is when she asks, &amp;ldquo;How was your day at work?&amp;rdquo; It goes one of two ways:
+ I was successful in getting Packer to trigger some Ansible code that built an AMI that subsequently launched Terraform, all of which initiated from a GitHub Pull Request monitored by Jenkins AND Concourse!</description>
+    </item>
+    
+    <item>
+      <title>What happened during the maintenance window...</title>
+      <link>https://agilesyndro.me/blog/during-the-maintenance/</link>
+      <pubDate>Sun, 16 Jun 2019 19:20:44 -0400</pubDate>
+      
+      <guid>https://agilesyndro.me/blog/during-the-maintenance/</guid>
+      <description>Epic Migration It was one of those once-a-year crazy maintenance weekends. You know the kind where we&amp;rsquo;ve got to take the whole stack down for a weekend while we migrate half a billion records from an old system to a shiny new one. The kind where nobody wants to discuss the rollback strategy because it&amp;rsquo;s as ugly as the upgrade. Let me say a million things went right during this migration, and it goes down in the books as an epic success.</description>
+    </item>
+    
+    <item>
+      <title>Terraform Modules Suck, but you should still use them</title>
+      <link>https://agilesyndro.me/blog/terraform-modules-suck/</link>
+      <pubDate>Mon, 10 Jun 2019 19:02:48 -0400</pubDate>
+      
+      <guid>https://agilesyndro.me/blog/terraform-modules-suck/</guid>
+      <description>Terraform Like so many other people I jumped into Terraform right away. This was the answer I was looking for. It could provide an automated way to store AWS configurations in source control. It also let me try out Azure, Google, and many other providers in a cloud-agnostic (sorta) kinda of way.
+Within a few days there were segments of code everywhere to create an EC2 instance. Everybody on my team made their own Terraform code.</description>
+    </item>
+    
+    <item>
+      <title>1998 is calling, and it wants a website</title>
+      <link>https://agilesyndro.me/blog/1998-is-calling/</link>
+      <pubDate>Mon, 10 Jun 2019 10:28:35 -0400</pubDate>
+      
+      <guid>https://agilesyndro.me/blog/1998-is-calling/</guid>
+      <description>It&amp;rsquo;s 1998 and the local robotics club wants a website. You&amp;rsquo;ve got this, you know HTML, some simple JavaScript and how to use Windows Paint to re-size images. The website design isn&amp;rsquo;t the problem, it never really is. Now comes the hard part, let&amp;rsquo;s get our web server up and running:
+ Red Hat 5.2 Apache v1.3 DNS A Record FTP Server for transfering the files  But let&amp;rsquo;s not forget what you had to tell the team:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://agilesyndro.me/privacy/terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://agilesyndro.me/privacy/terms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://agilesyndro.me/www/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://agilesyndro.me/www/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AgileSyndrome Payments</title>
+      <link>https://agilesyndro.me/accounting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://agilesyndro.me/accounting/</guid>
+      <description>  Cardholder name:    Email address:    Amount:    Next  Credit or debit card     Submit Payment  </description>
+    </item>
+    
+    <item>
+      <title>Contact Me</title>
+      <link>https://agilesyndro.me/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://agilesyndro.me/contact/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Peg! A place to hang your (web)hooks.</title>
+      <link>https://agilesyndro.me/support/peg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://agilesyndro.me/support/peg/</guid>
+      <description>Design  AWS API Gateway listens to all requests towards https://api.agilesyndro.me/{tenant}/{service}/{queue} When a request is reeived it is immediately saved in a raw form, into s3://bucket/tenant/service/queue/request_id.json Once the save is complete, an Amazon Simple Queue service gets a notification with the location of the S3 object. Finally, the API Gateway redirects to https://api.agilesyndro.me/handler/{service}/{tenant}/{queue}/{request_id} Various service_handlers can now process the request and return data. See services below.  Future Work  The requestId will be logged into DynamoDB The appropiate service_handler will be called.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://agilesyndro.me/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://agilesyndro.me/projects/</guid>
+      <description>Open Source Contributions  Hygieia/Cloud-Aws-Collector AWSudo Mailtrap  Command Line Tools TOTP
+ Generate MultiFactor auth codes on the command line. Great for automatically testing websites that require multi-factor authentication) My first Golang project! (Could use some code-review and style help)  Cloud Solutions  Amazon Web Services  Cost Control &amp;amp; Optimzations Reporting &amp;amp; Auditing Compute RDS &amp;amp; Databases   Docker &amp;amp; Kubernetes Heroku Azure  Azure Active Directory   OpenStack  CI Systems  Jenkins CircleCI GitHub Actions AWS Code{Commit|Pipeline|Build}*  Third Party Integrations  Twilio SMS Electronic Health Records (including FHIR)  </description>
+    </item>
+    
+    <item>
+      <title>Terms &amp; Conditions</title>
+      <link>https://agilesyndro.me/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://agilesyndro.me/privacy/</guid>
+      <description>Disclaimer The views express on this site are my own and not affiliated with any of my employers, past or present, unless otherwise specified. The materials provided on this site are made on an as-is basis. This site does not make any warranty, expressed or implied. Also, no warranty is made regarding the accuracy or reliability of this content. Our world changes quickly, and your milage may vary.
+Privacy I value your privacy.</description>
+    </item>
+    
+  </channel>
+</rss>
