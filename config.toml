@@ -18,7 +18,7 @@ disqusShortname = "agilesyndrome"
 
 [params]
 	author = "Drew E. Easley"
-	description = "Empowering the Open Source"
+	description = "Empowering Agile Teams"
 	footer = "AgileSyndrome"
         heapSiteId = "1793759258"
 
@@ -40,6 +40,6 @@ disqusShortname = "agilesyndrome"
     url = "/contact/"
     weight = 40
   [[menu.nav]]
-    name = "RSS"
-    url = "/index.xml"
+    name = "My Account"
+    url = "https://agilesyndrome.hbportal.co/app/"
     weight = 50

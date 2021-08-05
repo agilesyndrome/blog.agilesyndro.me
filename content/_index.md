@@ -14,6 +14,4 @@ title: "AgileSyndro.me"
 
 <i>The devPhobe was afraid to merge his code to master, but once he came down with AgileSyndrome he realized his code could be tested fully in a protected environment, and the well outlined rollback strategy erased all anxiety.</i>
 
-<hr/>
-| [blog](/blog) | [projects](/projects) | [terms](/terms) 
 

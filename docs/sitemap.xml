@@ -118,6 +118,11 @@
   </url>
   
   <url>
+    <loc>https://agilesyndro.me/account/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://agilesyndro.me/privacy/terms/</loc>
     <lastmod>2021-01-23T14:25:39-05:00</lastmod>
   </url>
@@ -133,13 +138,8 @@
   </url>
   
   <url>
-    <loc>https://agilesyndro.me/accounting/</loc>
-    <lastmod>2020-12-14T12:12:19-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://agilesyndro.me/contact/</loc>
-    <lastmod>2019-10-22T09:59:02-04:00</lastmod>
+    <lastmod>2021-08-05T05:18:54-04:00</lastmod>
   </url>
   
   <url>
