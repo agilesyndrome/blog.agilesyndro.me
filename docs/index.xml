@@ -5,11 +5,7 @@
     <link>https://agilesyndro.me/</link>
     <description>Recent content on AgileSyndro.me</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://agilesyndro.me/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://agilesyndro.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is your container strategy?</title>
       <link>https://agilesyndro.me/blog/container-strategies/</link>
@@ -29,9 +25,20 @@
       <pubDate>Mon, 09 Mar 2020 07:57:35 -0400</pubDate>
       
       <guid>https://agilesyndro.me/blog/multi-region-or-multi-zone/</guid>
-      <description>I see this type of request in my office pretty often. A customer calls or writes in with a proposal that looks almost like this: &amp;ldquo;I have my servers running in us-east-1, all behind a load balancer. Can you assist us with a failover setup in the us-west-1 region?&amp;rdquo;
+      <description>Updated 2021-Dec-19 Yes, you should be in multiple-regions
+I see this type of request in my office pretty often. A customer calls or writes in with a proposal that looks almost like this: &amp;ldquo;I have my servers running in us-east-1, all behind a load balancer. Can you assist us with a failover setup in the us-west-1 region?&amp;rdquo;
 Yes, I most certainly can, but it probably isn&amp;rsquo;t what you want.
 You run multiple EC2 instances, behind a load balancer or two.</description>
+    </item>
+    
+    <item>
+      <title>Do you really need redundancy in us-west-1?</title>
+      <link>https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/</link>
+      <pubDate>Mon, 09 Mar 2020 07:57:35 -0400</pubDate>
+      
+      <guid>https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/</guid>
+      <description>I recently looked back through my blog entries and came across an older article. &amp;ldquo;Do you really need redundancy in us-west-1&amp;rdquo;. For context, as I&amp;rsquo;m writing this article, we&amp;rsquo;re about a week after AWS experienced a short outage in both us-west-1 AND us-west-2 at the same time. We&amp;rsquo;re also a few weeks after a multi-hour outage of us-east-1.
+Let me be clear. I was wrong. If I led you astray, and your site suffered due to recent outages, I&amp;rsquo;m sorry.</description>
     </item>
     
     <item>
@@ -80,33 +87,6 @@ Within a few days there were segments of code everywhere to create an EC2 instan
       <guid>https://agilesyndro.me/blog/1998-is-calling/</guid>
       <description>It&amp;rsquo;s 1998 and the local robotics club wants a website. You&amp;rsquo;ve got this, you know HTML, some simple JavaScript and how to use Windows Paint to re-size images. The website design isn&amp;rsquo;t the problem, it never really is. Now comes the hard part, let&amp;rsquo;s get our web server up and running:
  Red Hat 5.2 Apache v1.3 DNS A Record FTP Server for transfering the files  But let&amp;rsquo;s not forget what you had to tell the team:</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://agilesyndro.me/account/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://agilesyndro.me/account/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://agilesyndro.me/privacy/terms/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://agilesyndro.me/privacy/terms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://agilesyndro.me/www/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://agilesyndro.me/www/</guid>
-      <description></description>
     </item>
     
     <item>

@@ -5,11 +5,7 @@
     <link>https://agilesyndro.me/support/</link>
     <description>Recent content in Supports on AgileSyndro.me</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://agilesyndro.me/support/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://agilesyndro.me/support/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Peg! A place to hang your (web)hooks.</title>
       <link>https://agilesyndro.me/support/peg/</link>

@@ -6,6 +6,10 @@ layout: single
 tags: [AWS, High Availability, Failover]
 ---
 
+**Updated 2021-Dec-19**
+[Yes, you should be in multiple-regions](https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/)
+
+
 I see this type of request in my office pretty often.  A customer calls or writes in with a proposal that looks almost like this: "I have my servers running in us-east-1, all behind a load balancer. Can you assist us with a failover setup in the us-west-1 region?"
 
 **Yes, I most certainly can, but it probably isn't what you want.**

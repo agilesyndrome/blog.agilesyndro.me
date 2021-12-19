@@ -1,170 +1,95 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://agilesyndro.me/tags/aws/</loc>
     <lastmod>2020-11-19T13:45:26-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/blog/</loc>
     <lastmod>2020-11-19T13:45:26-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/tags/containers/</loc>
     <lastmod>2020-11-19T13:45:26-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/tags/docker/</loc>
     <lastmod>2020-11-19T13:45:26-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/tags/ec2/</loc>
     <lastmod>2020-11-19T13:45:26-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/tags/kubernetes/</loc>
     <lastmod>2020-11-19T13:45:26-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/tags/</loc>
     <lastmod>2020-11-19T13:45:26-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/blog/container-strategies/</loc>
     <lastmod>2020-11-19T13:45:26-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/blog/multi-region-or-multi-zone/</loc>
     <lastmod>2020-03-09T09:40:45-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/</loc>
+    <lastmod>2020-03-09T07:57:35-04:00</lastmod>
+  </url><url>
     <loc>https://agilesyndro.me/tags/failover/</loc>
     <lastmod>2020-03-09T09:40:45-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/tags/high-availability/</loc>
     <lastmod>2020-03-09T09:40:45-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/tags/ebs/</loc>
     <lastmod>2019-11-11T19:56:22-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/tags/storage/</loc>
     <lastmod>2019-11-11T19:56:22-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/blog/which-ebs-storage/</loc>
     <lastmod>2019-11-11T19:56:22-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/blog/how-was-your-day/</loc>
     <lastmod>2019-10-22T13:03:59-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/tags/ansible/</loc>
     <lastmod>2019-10-22T13:03:59-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/tags/communication/</loc>
     <lastmod>2019-10-22T13:03:59-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/tags/love/</loc>
     <lastmod>2019-10-22T13:03:59-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/tags/terraform/</loc>
     <lastmod>2019-10-22T13:03:59-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/blog/during-the-maintenance/</loc>
     <lastmod>2019-10-22T13:03:59-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/blog/terraform-modules-suck/</loc>
     <lastmod>2019-10-22T13:03:59-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/blog/1998-is-calling/</loc>
     <lastmod>2019-10-22T13:03:59-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/tags/cost-control/</loc>
     <lastmod>2019-10-22T13:03:59-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://agilesyndro.me/account/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://agilesyndro.me/privacy/terms/</loc>
-    <lastmod>2021-01-23T14:25:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://agilesyndro.me/www/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/</loc>
-    <lastmod>2019-10-22T20:05:56-04:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-08-05T14:32:08-04:00</lastmod>
+  </url><url>
     <loc>https://agilesyndro.me/contact/</loc>
     <lastmod>2021-08-05T05:18:54-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/support/peg/</loc>
     <lastmod>2019-10-22T19:54:13-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://agilesyndro.me/privacy/</loc>
-    <lastmod>2021-01-23T14:25:39-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/projects/</loc>
     <lastmod>2020-11-19T13:45:26-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/support/</loc>
     <lastmod>2019-10-22T19:54:13-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://agilesyndro.me/privacy/</loc>
     <lastmod>2019-10-22T13:06:40-04:00</lastmod>
   </url>
-  
 </urlset>

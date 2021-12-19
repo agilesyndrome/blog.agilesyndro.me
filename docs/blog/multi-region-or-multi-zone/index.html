@@ -7,7 +7,7 @@
   <meta name="x-type" content="blog">
   <meta name="x-layout" content="single">
 
-  <meta name="generator" content="Hugo 0.65.3" />
+  <meta name="generator" content="Hugo 0.91.0" />
   <link rel="canonical" href="https://agilesyndro.me/blog/multi-region-or-multi-zone/">
 
   
@@ -233,7 +233,9 @@
           
   <main id="main">
     <h1>Do you really need redundancy in us-west-1?</h1>
-    <p>I see this type of request in my office pretty often.  A customer calls or writes in with a proposal that looks almost like this: &ldquo;I have my servers running in us-east-1, all behind a load balancer. Can you assist us with a failover setup in the us-west-1 region?&rdquo;</p>
+    <p><strong>Updated 2021-Dec-19</strong>
+<a href="https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/">Yes, you should be in multiple-regions</a></p>
+<p>I see this type of request in my office pretty often.  A customer calls or writes in with a proposal that looks almost like this: &ldquo;I have my servers running in us-east-1, all behind a load balancer. Can you assist us with a failover setup in the us-west-1 region?&rdquo;</p>
 <p><strong>Yes, I most certainly can, but it probably isn&rsquo;t what you want.</strong></p>
 <p>You run multiple EC2 instances, behind a load balancer or two.  Your health checks are set up properly.  Your RDS instance is set to be &ldquo;Multi-AZ&rdquo;. Chances are, you&rsquo;re already running a highly available and fault-tolerant system that can recover quickly.</p>
 <p>Let&rsquo;s dig into the details, and find out if multi-region failover strategies are what you want.  To begin, we need to understand the difference between the terms &ldquo;High Availability&rdquo; or HA, and &ldquo;Fault Tolerance&rdquo;. Your customers likely won&rsquo;t understand the difference when you create quotes, but in practice, there are large differences between what is expected between these two types of systems. Simply put, * customers should not notice the application performing badly in a fault-tolerant system*.  With high availability, customers may notice the underlying fault for a &ldquo;moment&rdquo; in time while the system heals itself, but it recovers without further customer interaction. Asking the customer to try something again is not HA!</p>
