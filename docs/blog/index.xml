@@ -22,6 +22,16 @@
     
     <item>
       <title>Do you really need redundancy in us-west-1?</title>
+      <link>https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/</link>
+      <pubDate>Mon, 09 Mar 2020 07:57:35 -0400</pubDate>
+      
+      <guid>https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/</guid>
+      <description>I recently looked back through my blog entries and came across an older article. &amp;ldquo;Do you really need redundancy in us-west-1&amp;rdquo;. For context, as I&amp;rsquo;m writing this article, we&amp;rsquo;re about a week after AWS experienced a short outage in both us-west-1 AND us-west-2 at the same time. We&amp;rsquo;re also a few weeks after a multi-hour outage of us-east-1.
+Let me be clear. I was wrong. If I led you astray, and your site suffered due to recent outages, I&amp;rsquo;m sorry.</description>
+    </item>
+    
+    <item>
+      <title>Yes, you should run in multiple regions</title>
       <link>https://agilesyndro.me/blog/multi-region-or-multi-zone/</link>
       <pubDate>Mon, 09 Mar 2020 07:57:35 -0400</pubDate>
       
@@ -30,16 +40,6 @@
 I see this type of request in my office pretty often. A customer calls or writes in with a proposal that looks almost like this: &amp;ldquo;I have my servers running in us-east-1, all behind a load balancer. Can you assist us with a failover setup in the us-west-1 region?&amp;rdquo;
 Yes, I most certainly can, but it probably isn&amp;rsquo;t what you want.
 You run multiple EC2 instances, behind a load balancer or two.</description>
-    </item>
-    
-    <item>
-      <title>Do you really need redundancy in us-west-1?</title>
-      <link>https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/</link>
-      <pubDate>Mon, 09 Mar 2020 07:57:35 -0400</pubDate>
-      
-      <guid>https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/</guid>
-      <description>I recently looked back through my blog entries and came across an older article. &amp;ldquo;Do you really need redundancy in us-west-1&amp;rdquo;. For context, as I&amp;rsquo;m writing this article, we&amp;rsquo;re about a week after AWS experienced a short outage in both us-west-1 AND us-west-2 at the same time. We&amp;rsquo;re also a few weeks after a multi-hour outage of us-east-1.
-Let me be clear. I was wrong. If I led you astray, and your site suffered due to recent outages, I&amp;rsquo;m sorry.</description>
     </item>
     
     <item>
