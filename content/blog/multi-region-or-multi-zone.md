@@ -1,5 +1,5 @@
 ---
-title: "Yes, you should run in multiple regions"
+title: "Do you really need redundancy in us-west-1?"
 date: 2020-03-09T07:57:35-04:00
 draft: false
 layout: single

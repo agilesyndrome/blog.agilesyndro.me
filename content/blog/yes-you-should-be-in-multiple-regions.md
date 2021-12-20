@@ -1,6 +1,6 @@
 ---
-title: "Do you really need redundancy in us-west-1?"
-date: 2020-03-09T07:57:35-04:00
+title: "Yes, you should really run in multiple regions."
+date: 2021-12-19T00:00:00-00:00
 draft: false
 layout: single
 tags: [AWS, High Availability, Failover]

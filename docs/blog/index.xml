@@ -6,7 +6,17 @@
     <description>Recent content in Blogs on AgileSyndro.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Nov 2020 00:00:00 -0500</lastBuildDate><atom:link href="https://agilesyndro.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://agilesyndro.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Yes, you should really run in multiple regions.</title>
+      <link>https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/</link>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/</guid>
+      <description>I recently looked back through my blog entries and came across an older article. &amp;ldquo;Do you really need redundancy in us-west-1&amp;rdquo;. For context, as I&amp;rsquo;m writing this article, we&amp;rsquo;re about a week after AWS experienced a short outage in both us-west-1 AND us-west-2 at the same time. We&amp;rsquo;re also a few weeks after a multi-hour outage of us-east-1.
+Let me be clear. I was wrong. If I led you astray, and your site suffered due to recent outages, I&amp;rsquo;m sorry.</description>
+    </item>
+    
     <item>
       <title>What is your container strategy?</title>
       <link>https://agilesyndro.me/blog/container-strategies/</link>
@@ -22,16 +32,6 @@
     
     <item>
       <title>Do you really need redundancy in us-west-1?</title>
-      <link>https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/</link>
-      <pubDate>Mon, 09 Mar 2020 07:57:35 -0400</pubDate>
-      
-      <guid>https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/</guid>
-      <description>I recently looked back through my blog entries and came across an older article. &amp;ldquo;Do you really need redundancy in us-west-1&amp;rdquo;. For context, as I&amp;rsquo;m writing this article, we&amp;rsquo;re about a week after AWS experienced a short outage in both us-west-1 AND us-west-2 at the same time. We&amp;rsquo;re also a few weeks after a multi-hour outage of us-east-1.
-Let me be clear. I was wrong. If I led you astray, and your site suffered due to recent outages, I&amp;rsquo;m sorry.</description>
-    </item>
-    
-    <item>
-      <title>Yes, you should run in multiple regions</title>
       <link>https://agilesyndro.me/blog/multi-region-or-multi-zone/</link>
       <pubDate>Mon, 09 Mar 2020 07:57:35 -0400</pubDate>
       
