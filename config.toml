@@ -38,7 +38,3 @@ disqusShortname = "agilesyndrome"
     name = "Contact"
     url = "/contact/"
     weight = 40
-  [[menu.nav]]
-    name = "My Account"
-    url = "https://agilesyndrome.hbportal.co/app/"
-    weight = 50
