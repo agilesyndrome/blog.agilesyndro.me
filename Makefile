@@ -15,8 +15,4 @@ build:
 serve:
 	hugo server -D -v --disableFastRender
 
-push:
-	aws s3 cp docs s3://cdn.agilesyndro.me/agilesyndro.me/$(env) --recursive
-	aws cloudfront create-invalidation --distribution-id E23AGKMUCJGNJ9 --paths='/'
-
 PHONY: clean, build, serve, update

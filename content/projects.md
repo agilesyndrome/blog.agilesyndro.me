@@ -21,7 +21,8 @@ title: "Projects"
 ### Cloud Solutions
 
 * Amazon Web Services
-    * Cost Control & Optimzations
+    * Security Controls
+    * Cost Control & Optimizations
     * Reporting & Auditing
     * Compute
     * RDS & Databases
@@ -30,6 +31,11 @@ title: "Projects"
 * Azure
   * Azure Active Directory
 * OpenStack
+
+### CyberSecurity Assessments
+  * Dependency / Vulnerabiltiy Scans
+  * SAST / DAST scanning
+  * Kubernetes / Container security
 
 ### CI Systems
   * Jenkins
