@@ -35,6 +35,6 @@ disqusShortname = "agilesyndrome"
     url = "/projects/"
     weight = 30
   [[menu.nav]]
-    name = "Contact"
-    url = "/contact/"
+    name = "About"
+    url = "/about/"
     weight = 40

@@ -2,16 +2,25 @@
 title: "AgileSyndro.me"
 ---
 
-<b><i>devPhobe</i> (n):</b> A developer with a fear they might break something, often in production, if they make certain changes; frequently caused by a lack of automated testing services
+![](/images/logo.png)
 
-<b><i>Agile Syndrome</i> (n)</b>: A developer condition, often characterized by one or more of the following traits:
+> DALL·E generated art: A samari with a sword protecting a cloud, in the form of Hiroshige’s Stations of the Tokaido with muted colors
 
-* Follows the principles outlined in the [Agile Manifesto](https://agilemanifesto.org/principles.html)
-* Works in small iterative changes, rather than large unmergable code branches
-* Exudes passion about automating builds, deployments, and rollbacks
-* Writes and runs automated tests with every commit
-* Writes infrastructure as code using industry standard tools like [Terraform](https://terraform.io) and [CloudFormation](https://aws.amazon.com/cloudformation/)
+* Does your development team fear they might break something, often in production, when certain changes are made?
+* Does your team lack automated testing frameworks?
 
-<i>The devPhobe was afraid to merge his code to master, but once he came down with AgileSyndrome he realized his code could be tested fully in a protected environment, and the well outlined rollback strategy erased all anxiety.</i>
+Don't be a `devPhobe`. You don't need to be afraid of development, even in production. 
+
+Would you rather be characterized as:
+* A team that follows the principles outlined in the [Agile Manifesto](https://agilemanifesto.org/principles.html)
+* Working in small iterative changes, rather than large unmergable code branches
+* Exuding passion about automating builds, deployments, and rollbacks
+* Writing and running automated tests with every commit
+* Using infrastructure as code using industry standard tools like [OpenTofu](https://opentofu.org/),  [Terraform](https://terraform.io) and [CloudFormation](https://aws.amazon.com/cloudformation/)
+
+
+
+The `devPhobe` was afraid to merge his code to master, but once he came down with AgileSyndrome he realized his code could write 
+fully tested code from a protected environment, and deploy with a well outlined rollback strategy, erasing all anxiety.</i>
 
 
