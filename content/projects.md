@@ -8,6 +8,7 @@ title: "Projects"
 * [AWSudo](https://github.com/meltwater/awsudo/pull/39)
 * [Mailtrap](https://github.com/eaudeweb/edw.docker.mailtrap/pull/11)
 * [terraform-provider-servicenow](https://github.com/tylerhatton/terraform-provider-servicenow/pull/7)
+* [infisical k8s-operator](https://github.com/Infisical/infisical/pull/1659)
 
 ### Command Line Tools
 
