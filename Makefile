@@ -15,4 +15,8 @@ build:
 serve:
 	hugo server -D -v --disableFastRender
 
-PHONY: clean, build, serve, update
+cdn:
+	aws s3 sync cdn s3://cdn.agilesyndro.me/cdn.agilesyndro.me
+
+.PHONY: cdn
+
