@@ -3,8 +3,12 @@ languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "AgileSyndro.me"
 theme = 'cupper'
+publishDir = 'docs'
 enableGitInfo = true
 disqusShortname = "agilesyndrome"
+
+[security]
+	allowContent = ['^text/markdown$', '^text/html$', '^text/org$']
 
 [taxonomies]
 	tag="tags"
