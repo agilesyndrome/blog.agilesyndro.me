@@ -16,9 +16,9 @@ disqusShortname = "agilesyndrome"
 	quality = 99
 
 [params]
-	author = "Drew E. Easley"
-	description = "### Empowering Secure Agile Teams"
-	footer = "AgileSyndrome"
+	author = "Drew Elliot Easley"
+	description = "### Dev, security, and transit projects by Drew Elliot Easley"
+	footer = "Drew E. Easley"
         heapSiteId = "1793759258"
 
 [menu]

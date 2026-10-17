@@ -4,21 +4,16 @@
     <title>Docker on AgileSyndro.me</title>
     <link>https://agilesyndro.me/tags/docker/</link>
     <description>Recent content in Docker on AgileSyndro.me</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Nov 2020 00:00:00 -0500</lastBuildDate><atom:link href="https://agilesyndro.me/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Nov 2020 13:45:26 -0500</lastBuildDate>
+    <atom:link href="https://agilesyndro.me/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is your container strategy?</title>
       <link>https://agilesyndro.me/blog/container-strategies/</link>
       <pubDate>Tue, 17 Nov 2020 00:00:00 -0500</pubDate>
-      
       <guid>https://agilesyndro.me/blog/container-strategies/</guid>
-      <description>Do any of these statements cause you anxiety?  The queue is backed up with work, can you add more servers?
-  One or more of your Amazon EC2 instances are scheduled for maintenance.
-  Alert: production-api-3 is at 90% disk space.
-  We need to upgrade the version of Ruby on the production system.
-  Can I borrow the staging environment for a few days?</description>
+      <description>&lt;h2 id=&#34;do-any-of-these-statements-cause-you-anxiety&#34;&gt;Do any of these statements cause you anxiety?&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The queue is backed up with work, can you add more servers?&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;One or more of your Amazon EC2 instances are scheduled for maintenance.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Alert: production-api-3 is at 90% disk space.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;We need to upgrade the version of Ruby on the production system.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Can I borrow the staging environment for a few days?&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;We need to rollback the latest code deployment.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Anxiety around these statements usually indicates that your &amp;ldquo;container&amp;rdquo; strategy needs to be addressed, and I&amp;rsquo;m not just talking about your migration to Kubernetes or Docker.  In the technical sense of a word, a container is: &amp;ldquo;an object that can be used to hold or transport something.&amp;rdquo;  From a DevOps perspective, we&amp;rsquo;re going to look at the four layers of containerization:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -7,7 +7,7 @@
   <meta name="x-type" content="page">
   <meta name="x-layout" content="">
 
-  <meta name="generator" content="Hugo 0.91.0" />
+  <meta name="generator" content="Hugo 0.140.2">
   <link rel="canonical" href="https://agilesyndro.me/projects/">
 
   
@@ -17,6 +17,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+
+  <script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
+    heap.load("1793759258");
+  </script>
 
 
   
@@ -140,11 +145,12 @@
   <div>
     <div class="intro">
       <a class="logo" href="/" aria-label="AgileSyndro.me home page">
-        <img src="https://agilesyndro.me/images/logos/v1/logo_transparent_background.png" alt="">
+        <img src="/images/logo.png" alt="">
       </a>
       <p class="library-desc">
         
-          Empowering Agile Teams
+          <h3 id="dev-security-and-transit-projects-by-drew-elliot-easley">Dev, security, and transit projects by Drew Elliot Easley</h3>
+
         
       </p>
     </div>
@@ -203,24 +209,11 @@
       
       
       
-      <a href="/contact/" >
+      <a href="/about/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
-        <span class="text">Contact</span>
-      </a>
-    </li>
-  
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="https://agilesyndrome.hbportal.co/app/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use xlink:href="#bookmark"></use>
-        </svg>
-        <span class="text">My Account</span>
+        <span class="text">About</span>
       </a>
     </li>
   
@@ -233,25 +226,48 @@
           
   <main id="main">
     <h1>Projects</h1>
-    <h3 id="open-source-contributions">Open Source Contributions</h3>
+    <h3 id="ttcstatusca">TTCStatus.ca</h3>
+<p><a href="https://ttcstatus.ca">TTCStatus.ca</a> — a live map of Toronto&rsquo;s streetcar network, with real-time TTC vehicle positions.</p>
+<p><strong>Why I built it:</strong> I live here. I ride these things. And I&rsquo;ve spent far too many winter evenings at a stop
+watching the display insist my streetcar was &ldquo;due&rdquo; while it was, demonstrably, nowhere. So I built the tool
+I wanted to exist: every route on a map, every vehicle in real time. The user I design for is me, standing
+in the cold, deciding whether to wait or walk.</p>
+<hr>
+<h3 id="no-security">NO SECURITY</h3>
+<p><a href="https://nosecurity.dev">NO SECURITY</a> — a cybersecurity museum of mistakes.</p>
+<p><strong>Why I built it:</strong> Every post-mortem I&rsquo;ve ever read sanitises the best part: the human who did something
+completely reasonable that still ended in catastrophe. After 17 years in security, my favourite stories were
+always told quietly, by people asking me not to use their name. So I&rsquo;m building the museum those stories
+deserve — anonymous, fictionalised exhibits where the names and lines of code have been changed to protect
+what&rsquo;s left of the guilty. Submissions are accepted; identities are not. No cookies, no analytics, no
+tracking: privacy is part of the exhibition, and the doors open once no single story can be traced back to
+the person who submitted it.</p>
+<hr>
+<h3 id="command-line-tools">Command Line Tools</h3>
+<p><a href="https://gitlab.com/agilesyndrome/totp">TOTP</a></p>
+<p><strong>Why I built it:</strong> My automated test suites needed 2FA codes, and my phone was tired of being interrogated
+every five minutes. So I taught myself Go by building exactly the thing I needed — my first Go project, so
+yes, it could use some code-review and style help. Generate multi-factor auth codes right on the command line.</p>
+<hr>
+<h3 id="open-source-contributions">Open Source Contributions</h3>
+<p>Most of these started the same way: something broke, I fixed it, and I figured strangers on the internet
+shouldn&rsquo;t have to suffer the way I did.</p>
 <ul>
 <li><a href="https://github.com/Hygieia/hygieia-cloud-aws-collector/pull/7">Hygieia/Cloud-Aws-Collector</a></li>
 <li><a href="https://github.com/meltwater/awsudo/pull/39">AWSudo</a></li>
 <li><a href="https://github.com/eaudeweb/edw.docker.mailtrap/pull/11">Mailtrap</a></li>
+<li><a href="https://github.com/tylerhatton/terraform-provider-servicenow/pull/7">terraform-provider-servicenow</a></li>
+<li><a href="https://github.com/Infisical/infisical/pull/1659">infisical k8s-operator</a></li>
+<li><a href="https://github.com/traccar/traccar/pull/5712">traccar SMS</a></li>
 </ul>
-<h3 id="command-line-tools">Command Line Tools</h3>
-<p><a href="https://gitlab.com/agilesyndrome/totp">TOTP</a></p>
-<ul>
-<li>Generate MultiFactor auth codes on the command line.</li>
-<li>Great for automatically testing websites that require multi-factor authentication)</li>
-<li>My first Golang project! (Could use some code-review and style help)</li>
-</ul>
-<!-- raw HTML omitted -->
-<h3 id="cloud-solutions">Cloud Solutions</h3>
+<hr>
+<h3 id="the-toolbox">The Toolbox</h3>
+<p>Things I&rsquo;ve spent enough hours with to have opinions about:</p>
 <ul>
 <li>Amazon Web Services
 <ul>
-<li>Cost Control &amp; Optimzations</li>
+<li>Security Controls</li>
+<li>Cost Control &amp; Optimizations</li>
 <li>Reporting &amp; Auditing</li>
 <li>Compute</li>
 <li>RDS &amp; Databases</li>
@@ -266,14 +282,20 @@
 </li>
 <li>OpenStack</li>
 </ul>
-<h3 id="ci-systems">CI Systems</h3>
+<p><strong>Security assessments</strong></p>
+<ul>
+<li>Dependency / Vulnerabiltiy Scans</li>
+<li>SAST / DAST scanning</li>
+<li>Kubernetes / Container security</li>
+</ul>
+<p><strong>CI systems</strong></p>
 <ul>
 <li>Jenkins</li>
 <li>CircleCI</li>
 <li>GitHub Actions</li>
 <li>AWS Code{Commit|Pipeline|Build}*</li>
 </ul>
-<h3 id="third-party-integrations">Third Party Integrations</h3>
+<p><strong>Third party integrations</strong></p>
 <ul>
 <li>Twilio SMS</li>
 <li>Electronic Health Records (including FHIR)</li>
@@ -289,7 +311,7 @@
     </label>
   </div>
   
-    AgileSyndrome
+    Drew E. Easley
   
 </footer>
 

@@ -4,30 +4,23 @@
     <title>Failover on AgileSyndro.me</title>
     <link>https://agilesyndro.me/tags/failover/</link>
     <description>Recent content in Failover on AgileSyndro.me</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://agilesyndro.me/tags/failover/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Dec 2021 20:47:24 -0500</lastBuildDate>
+    <atom:link href="https://agilesyndro.me/tags/failover/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Yes, you should really run in multiple regions.</title>
       <link>https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/</link>
       <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/</guid>
-      <description>I recently looked back through my blog entries and came across an older article. &amp;ldquo;Do you really need redundancy in us-west-1&amp;rdquo;. For context, as I&amp;rsquo;m writing this article, we&amp;rsquo;re about a week after AWS experienced a short outage in both us-west-1 AND us-west-2 at the same time. We&amp;rsquo;re also a few weeks after a multi-hour outage of us-east-1.
-Let me be clear. I was wrong. If I led you astray, and your site suffered due to recent outages, I&amp;rsquo;m sorry.</description>
+      <description>&lt;p&gt;I recently looked back through my blog entries and came across an older article.&#xA;&amp;ldquo;&lt;a href=&#34;https://agilesyndro.me/blog/multi-region-or-multi-zone/&#34;&gt;Do you really need redundancy in us-west-1&lt;/a&gt;&amp;rdquo;. For context,&#xA;as I&amp;rsquo;m writing this article, we&amp;rsquo;re about a week after AWS experienced a short outage in both &lt;code&gt;us-west-1&lt;/code&gt; AND &lt;code&gt;us-west-2&lt;/code&gt;&#xA;at the same time. We&amp;rsquo;re also a few weeks after a multi-hour outage of &lt;code&gt;us-east-1&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Let me be clear. &lt;strong&gt;I was wrong.&lt;/strong&gt; If I led you astray, and your site suffered due to recent outages, I&amp;rsquo;m sorry.&#xA;Let&amp;rsquo;s make things right.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Do you really need redundancy in us-west-1?</title>
       <link>https://agilesyndro.me/blog/multi-region-or-multi-zone/</link>
       <pubDate>Mon, 09 Mar 2020 07:57:35 -0400</pubDate>
-      
       <guid>https://agilesyndro.me/blog/multi-region-or-multi-zone/</guid>
-      <description>Updated 2021-Dec-19 Yes, you should be in multiple-regions
-I see this type of request in my office pretty often. A customer calls or writes in with a proposal that looks almost like this: &amp;ldquo;I have my servers running in us-east-1, all behind a load balancer. Can you assist us with a failover setup in the us-west-1 region?&amp;rdquo;
-Yes, I most certainly can, but it probably isn&amp;rsquo;t what you want.
-You run multiple EC2 instances, behind a load balancer or two.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Updated 2021-Dec-19&lt;/strong&gt;&#xA;&lt;a href=&#34;https://agilesyndro.me/blog/yes-you-should-be-in-multiple-regions/&#34;&gt;Yes, you should be in multiple-regions&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I see this type of request in my office pretty often.  A customer calls or writes in with a proposal that looks almost like this: &amp;ldquo;I have my servers running in us-east-1, all behind a load balancer. Can you assist us with a failover setup in the us-west-1 region?&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Yes, I most certainly can, but it probably isn&amp;rsquo;t what you want.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;You run multiple EC2 instances, behind a load balancer or two.  Your health checks are set up properly.  Your RDS instance is set to be &amp;ldquo;Multi-AZ&amp;rdquo;. Chances are, you&amp;rsquo;re already running a highly available and fault-tolerant system that can recover quickly.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

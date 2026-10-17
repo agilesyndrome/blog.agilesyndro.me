@@ -4,23 +4,24 @@ title: "About"
 
 ## About AgileSyndrome
 
-AgileSyndrome is a consulting company that can help empower your team to build secure, reliable, fast,
-affordable, and agile cloud systems.
+AgileSyndrome used to be a consulting business: empowering teams to build secure, reliable, fast, affordable,
+and agile cloud systems. I've since shuttered the doors — no more invoices, no more slide decks — but I kept
+the name, because the syndrome is permanent. This site is now simply where I keep my projects, my open source
+contributions, and my blog posts.
 
-## About Drew Easley
-
-
+## About Drew Elliot Easley
 
 [![Certified Kubernetes Administrator Badge](https://images.agilesyndro.me/cka.png)](https://openprofile.dev/profile/clouddrew)
 
+I'm Drew. I have a master's degree in Computer Information Systems and 17 years across IT, software development,
+and cybersecurity — long enough to have both strong opinions and the scars that justify them. I'm a certified
+Kubernetes administrator (CKA), previously an AWS Solutions Architect and AWS security specialist, and I've spent
+my career trying to make software development more efficient and secure: automating the parts humans are bad at,
+and documenting the parts we all pretend we'll remember later.
 
-With a master's degree in Computer Information Systems, and 17 years of experience in IT, Software Development, and Cyber-Security
-Drew wants to share his passion of making software development more efficient and secure. Drew is also a certified
-Kubernetes administrator (CKA), and previously an AWS Solutions Architect and AWS security specialist.
-
-Outside of computers, Drew is husband, father of four, and passionate about healthy cooking, bike riding, 
-and [photography](https://unsplash.com/@agilesyndrome)
-
+Outside of computers, I'm a husband and father of four, which means my incident-response skills get exercised
+daily whether I like it or not. I'm also passionate about healthy cooking, bike riding, and
+[photography](https://unsplash.com/@agilesyndrome).
 
 * [LinkedIn](https://www.linkedin.com/in/dreweasley/)
 * [GitHub](https://github.com/juneeighteen)
@@ -36,4 +37,3 @@ and [photography](https://unsplash.com/@agilesyndrome)
             OrcID 0009-0008-5776-2221
 </a>
 {{< /rawhtml >}}
-

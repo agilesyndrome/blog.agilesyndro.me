@@ -4,16 +4,15 @@
     <title>Supports on AgileSyndro.me</title>
     <link>https://agilesyndro.me/support/</link>
     <description>Recent content in Supports on AgileSyndro.me</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://agilesyndro.me/support/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://agilesyndro.me/support/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Peg! A place to hang your (web)hooks.</title>
       <link>https://agilesyndro.me/support/peg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://agilesyndro.me/support/peg/</guid>
-      <description>Design  AWS API Gateway listens to all requests towards https://api.agilesyndro.me/{tenant}/{service}/{queue} When a request is reeived it is immediately saved in a raw form, into s3://bucket/tenant/service/queue/request_id.json Once the save is complete, an Amazon Simple Queue service gets a notification with the location of the S3 object. Finally, the API Gateway redirects to https://api.agilesyndro.me/handler/{service}/{tenant}/{queue}/{request_id} Various service_handlers can now process the request and return data. See services below.  Future Work  The requestId will be logged into DynamoDB The appropiate service_handler will be called.</description>
+      <description>&lt;h3 id=&#34;design&#34;&gt;Design&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AWS API Gateway listens to all requests towards &lt;a href=&#34;https://api.agilesyndro.me/%7Btenant%7D/%7Bservice%7D/%7Bqueue%7D&#34;&gt;https://api.agilesyndro.me/{tenant}/{service}/{queue}&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;When a request is reeived it is immediately saved in a raw form, into s3://bucket/tenant/service/queue/request_id.json&lt;/li&gt;&#xA;&lt;li&gt;Once the save is complete, an Amazon Simple Queue service gets a notification with the location of the S3 object.&lt;/li&gt;&#xA;&lt;li&gt;Finally, the API Gateway redirects to &lt;a href=&#34;https://api.agilesyndro.me/handler/%7Bservice%7D/%7Btenant%7D/%7Bqueue%7D/%7Brequest_id%7D&#34;&gt;https://api.agilesyndro.me/handler/{service}/{tenant}/{queue}/{request_id}&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Various service_handlers can now process the request and return data.  See services below.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;future-work&#34;&gt;Future Work&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The requestId will be logged into DynamoDB&lt;/li&gt;&#xA;&lt;li&gt;The appropiate &lt;code&gt;service_handler&lt;/code&gt; will be called.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;what-services-are-currently-supported&#34;&gt;What services are currently supported?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GitHub WebHooks (Record all data about commits / PRs / etc )&lt;/li&gt;&#xA;&lt;li&gt;Twilio (Inbound Voice Call Forwarding)&lt;/li&gt;&#xA;&lt;li&gt;Twilio (Inbound SMS)&lt;/li&gt;&#xA;&lt;li&gt;Website Analytics ( jQuery.post )&lt;/li&gt;&#xA;&lt;li&gt;iPhone Siri Shortcuts&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why&#34;&gt;Why?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Jenkins currently needs to be exposed to the public internet to allow Github Webhooks to function properly.  THis shouldn&amp;rsquo;t be necessary.  API Gateway can queue up the request and later &amp;ldquo;re-play&amp;rdquo; it to a private Jenkins server based on the SQS information.  By saving the record into S3, we can reply it even if the Jenkins server is offline at the time the request comes in.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

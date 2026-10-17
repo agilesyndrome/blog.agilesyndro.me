@@ -1,0 +1,22 @@
+{
+  "id": "agilesyndrome/snowblaster",
+  "versions": [
+    {
+      "version": "0.0.1",
+      "protocols": [
+        "5.0"
+      ],
+      "platforms": [
+        {
+          "os": "darwin",
+          "arch": "amd64"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64"
+        }
+      ]
+    }
+  ],
+  "warnings": null
+}

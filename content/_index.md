@@ -4,23 +4,21 @@ title: "AgileSyndro.me"
 
 ![](/images/logo.png)
 
-> DALL·E generated art: A samari with a sword protecting a cloud, in the form of Hiroshige’s Stations of the Tokaido with muted colors
+> DALL·E generated art: A samari with a sword protecting a cloud, in the form of Hiroshige's Stations of the Tokaido with muted colors
 
-* Does your development team fear they might break something, often in production, when certain changes are made?
-* Does your team lack automated testing frameworks?
+Hi, I'm **Drew Elliot Easley**.
 
-Don't be a `devPhobe`. You don't need to be afraid of development, even in production. 
+I've spent 17 years in IT, software development, and cybersecurity — long enough to have strong opinions and the war stories to back them up. For a while, that meant running a little consulting shop called AgileSyndrome. I've since shuttered the doors: the invoices stopped, the slide decks went into the recycling bin, and not one part of me misses a status-update meeting that could have been an email.
 
-Would you rather be characterized as:
-* A team that follows the principles outlined in the [Agile Manifesto](https://agilemanifesto.org/principles.html)
+The work itself? Never left. I'm still developing, still security-nerding, still having an unreasonable amount of fun doing it — arguably more now that nobody's paying me to pretend to enjoy meetings.
+
+This site is my corner of the internet: projects I build because they should exist, open-source PRs I send because a bug annoyed me, and the occasional blog post when the kids, the bike ride, and the dinner prep allow.
+
+I never did shake the AgileSyndrome symptoms, though:
+
 * Working in small iterative changes, rather than large unmergable code branches
 * Exuding passion about automating builds, deployments, and rollbacks
 * Writing and running automated tests with every commit
-* Using infrastructure as code using industry standard tools like [OpenTofu](https://opentofu.org/),  [Terraform](https://terraform.io) and [CloudFormation](https://aws.amazon.com/cloudformation/)
+* Using infrastructure as code with industry standard tools like [OpenTofu](https://opentofu.org/), [Terraform](https://terraform.io) and [CloudFormation](https://aws.amazon.com/cloudformation/)
 
-
-
-The `devPhobe` was afraid to merge his code to master, but once he came down with AgileSyndrome he realized his code could write 
-fully tested code from a protected environment, and deploy with a well outlined rollback strategy, erasing all anxiety.</i>
-
-
+Side effects may include a [Certified Kubernetes Administrator](https://openprofile.dev/profile/clouddrew) badge, strong opinions about CI pipelines, and an unreasonable affection for Toronto streetcars.
